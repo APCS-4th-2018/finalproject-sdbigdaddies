@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=PhysicalObject
+comment0.text=\r\n\ Abstract\ class\ PhysicalObject\ -\ Parent\ class\ for\ all\ objects\ to\ be\ rotated.\r\n\r\n\ @author\ Omri\ Habot\r\n\ @version\ 1.0.0\r\n
+comment1.params=
+comment1.target=PhysicalObject()
+comment1.text=\r\n\ Initializes\ the\ both\ mass\ and\ radius\ of\ the\r\n\ object\ with\ 0.\r\n
+comment2.params=myMass\ myRadius
+comment2.target=PhysicalObject(double,\ double)
+comment2.text=\r\n\ Initializes\ the\ mass\ and\ radius\ of\ the\r\n\ object\ with\ the\ passed\ values.\r\n\ \r\n\ @param\ myMass\ the\ mass\ of\ the\ object\ in\ kilograms\r\n\ @param\ myRadius\ the\ radius\ (half\ the\ length)\ of\ the\ object\ in\ meters\r\n
+comment3.params=
+comment3.target=double\ getInertia()
+comment3.text=\r\n\ constructor\ PhysicalObject\ -\ initializes\ the\ mass\ and\ radius\ of\ the\r\n\ object\ with\ the\ passed\ values.\r\n
+comment4.params=myMass
+comment4.target=void\ setMass(double)
+comment4.text=\r\n\ Sets\ the\ new\ mass\ of\ the\ object.\r\n\ \r\n\ @param\ myMass\ the\ mass\ of\ the\ object\ in\ kilograms.\r\n
+comment5.params=
+comment5.target=double\ getMass()
+comment5.text=\r\n\ Returns\ the\ mass\ of\ the\ object.\r\n\ \r\n\ @return\ The\ mass\ of\ the\ object\ in\ kilograms.\r\n
+comment6.params=myRadius
+comment6.target=void\ setRadius(double)
+comment6.text=\r\n\ Sets\ the\ new\ radius\ of\ the\ object.\r\n\ \r\n\ @param\ myRadius\ the\ radius\ (half\ the\ length)\ of\ the\ object\ in\ meters.\r\n
+comment7.params=
+comment7.target=double\ getRadius()
+comment7.text=\r\n\ Returns\ the\ radius\ of\ the\ object.\r\n\ \r\n\ @return\ The\ radius\ (half\ the\ length)\ of\ the\ object\ in\ meters.\r\n
+numComments=8
