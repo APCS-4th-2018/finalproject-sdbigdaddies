@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=PhysicalSphere
-comment0.text=\r\n\ Abstract\ class\ PhysicalSphere\ -\ Sphere\ object\ to\ be\ rotated\ in\ the\ pendulum.\r\n\r\n\ @author\ Omri\ Habot\r\n\ @version\ 1.0.0\r\n
-comment1.params=myMass\ myRadius
-comment1.target=PhysicalSphere(double,\ double)
-comment1.text=\r\n\ Initializes\ the\ mass\ and\ radius\ of\ the\r\n\ object\ with\ the\ passed\ values.\r\n\ \r\n\ @param\ myMass\ the\ mass\ of\ the\ object\ in\ kilograms\r\n\ @param\ myRadius\ the\ radius\ (half\ the\ length)\ of\ the\ object\ in\ meters\r\n
-comment2.params=
-comment2.target=double\ getInertia()
-numComments=3
