@@ -1,24 +1,81 @@
 
 /**
- * Abstract class PhysicalObject - write a description of the class here
+ * Abstract class PhysicalObject - Parent class for all objects to be rotated.
  *
- * @author (your name here)
- * @version (version number or date here)
+ * @author Omri Habot
+ * @version 1.0.0
  */
 public abstract class PhysicalObject
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    protected double mass; //mass of the object in kilograms
+    protected double radius; //radius (half the length) of the object in meters
+    
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    * Initializes the both mass and radius of the
+    * object with 0.
+    */
+    public PhysicalObject()
     {
-        // put your code here
-        return x + y;
+        mass = 0;
+        radius = 0;
+    }
+    
+    /**
+    * Initializes the mass and radius of the
+    * object with the passed values.
+    * 
+    * @param myMass the mass of the object in kilograms
+    * @param myRadius the radius (half the length) of the object in meters
+    */
+    public PhysicalObject(double myMass, double myRadius)
+    {
+        mass = myMass;
+        radius = myRadius;
+    }
+    
+    /**
+    * constructor PhysicalObject - initializes the mass and radius of the
+    * object with the passed values.
+    */
+    public abstract double getInertia();
+    
+    /**
+    * Sets the new mass of the object.
+    * 
+    * @param myMass the mass of the object in kilograms.
+    */
+    public void setMass(double myMass)
+    {
+        mass = myMass;
+    }
+    
+    /**
+    * Returns the mass of the object.
+    * 
+    * @return The mass of the object in kilograms.
+    */
+    public double getMass()
+    {
+        return mass;
+    }
+    
+    /**
+    * Sets the new radius of the object.
+    * 
+    * @param myRadius the radius (half the length) of the object in meters.
+    */
+    public void setRadius(double myRadius)
+    {
+        radius = myRadius;
+    }
+    
+    /**
+    * Returns the radius of the object.
+    * 
+    * @return The radius (half the length) of the object in meters.
+    */
+    public double getRadius()
+    {
+        return radius;
     }
 }
