@@ -7,18 +7,37 @@
  */
 public abstract class PhysicalObject
 {
-    // instance variables - replace the example below with your own
-    private int x;
+     protected double myMass;
+   protected double myRadius;
+   protected double MyInertiaValue;
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+   public PhysicalObject(double m, double r)
+   {
+   
+   }
+
+   public double getMyMass()
+   {
+   }
+
+   public double getMyRadius()
+   {
+   }
+
+   public double getMyInertiaValue()
+   {
+   }
+
+   public void setMyMass(double m)
+   {
+   }
+
+   public void setMyRadius(double r)
+   {
+   }
+
+   public void setMyInertiaValue(double i)
+   {
+   }
+
 }
