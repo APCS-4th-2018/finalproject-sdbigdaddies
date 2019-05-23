@@ -1,9 +1,10 @@
 
 /**
- * Abstract class PhysicalObject - write a description of the class here
+ * Abstract class PhysicalObject - Parent class for all objects to be rotated
+ * by the string in the pendulum.
  *
- * @author (your name here)
- * @version (version number or date here)
+ * @author Omri Habot
+ * @version 1.0.0
  */
 public abstract class PhysicalObject
 {
