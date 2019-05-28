@@ -6,5 +6,5 @@ comment1.target=PhysicalSphere(double,\ double)
 comment1.text=\n\ Initializes\ the\ mass\ and\ radius\ of\ the\n\ object\ with\ the\ passed\ values.\n\ \n\ @param\ myMass\ the\ mass\ of\ the\ object\ in\ kilograms\n\ @param\ myRadius\ the\ radius\ (half\ the\ length)\ of\ the\ object\ in\ meters\n
 comment2.params=
 comment2.target=double\ getInertia()
-comment2.text=\n\ Returns\ the\ value\ of\ the\ moment\ of\ inertia\ of\ the\ object\ in\ terms\n\ of\ kilograms\ and\ meters.\n\ \n\ @return\ inertia\ the\ moment\ of\ inertia\ of\ the\ object.\n
+comment2.text=\n\ Returns\ the\ value\ of\ the\ moment\ of\ inertia\ of\ the\ object\ in\ terms\n\ of\ kilograms\ and\ meters.\n\ \n\ @return\ the\ moment\ of\ inertia\ of\ the\ object.\n
 numComments=3

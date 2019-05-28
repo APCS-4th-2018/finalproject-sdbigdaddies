@@ -7,16 +7,22 @@
  */
 public class PhysicalBar extends PhysicalObject
 {
+    private double width; //width of the prism
+    private double height; //height of the prism
     /**
     * Initializes the mass and radius of the
     * object with the passed values.
     * 
     * @param myMass the mass of the object in kilograms.
     * @param myRadius the radius (half the length) of the object in meters.
+    * @param myWidth the width of the object in meters.
+    * @param myHeight the height of the object in meters.
     */
-    public PhysicalBar(double myMass, double myRadius)
+    public PhysicalBar(double myMass, double myRadius, double myWidth, double myHeight)
     {
         super(myMass, myRadius);
+        myWidth = width;
+        myHeight = height;
     }
     
     /**
@@ -27,6 +33,46 @@ public class PhysicalBar extends PhysicalObject
      */
     public double getInertia()
     {
-        return Math.pow(radius, 2) * mass * 0.4;
+        return mass / 12 * (Math.pow(width, 2) + Math.pow(2 * radius, 2));
+    }
+    
+    /**
+    * Sets the new height of the object.
+    * 
+    * @param myHeight the height of the object in meters.
+    */
+    public void setHeight(double myHeight)
+    {
+        height = myHeight;
+    }
+    
+    /**
+    * Returns the height of the object.
+    * 
+    * @return The height of the object in meters.
+    */
+    public double getHeight()
+    {
+        return height;
+    }
+    
+    /**
+    * Sets the new width of the object.
+    * 
+    * @param width The width of the object in meters.
+    */
+    public void setWidth(double myWidth)
+    {
+        width = myWidth;
+    }
+    
+    /**
+    * Returns the radius of the object.
+    * 
+    * @return The width of the object in meters.
+    */
+    public double getWidth()
+    {
+        return width;
     }
 }

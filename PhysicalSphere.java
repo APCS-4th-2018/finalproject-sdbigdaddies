@@ -23,10 +23,10 @@ public class PhysicalSphere extends PhysicalObject
      * Returns the value of the moment of inertia of the object in terms
      * of kilograms and meters.
      * 
-     * @return inertia the moment of inertia of the object.
+     * @return the moment of inertia of the object.
      */
     public double getInertia()
     {
-        return Math.pow(radius, 2) * mass * 0.4;
+        return Math.pow(radius, 2) * mass * 2 / 5;
     }
 }
