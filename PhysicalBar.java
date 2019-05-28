@@ -37,6 +37,16 @@ public class PhysicalBar extends PhysicalObject
     }
     
     /**
+     * Returns the name of the type of object.
+     * 
+     * @return the name of the type of object
+     */
+    public String type()
+    {
+        return "bar";
+    }
+    
+    /**
     * Sets the new height of the object.
     * 
     * @param myHeight the height of the object in meters.

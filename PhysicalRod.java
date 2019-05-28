@@ -29,4 +29,14 @@ public class PhysicalRod extends PhysicalObject
     {
         return Math.pow(2 * radius, 2) * mass / 12;
     }
+    
+    /**
+     * Returns the name of the type of object.
+     * 
+     * @return the name of the type of object
+     */
+    public String type()
+    {
+        return "rod";
+    }
 }

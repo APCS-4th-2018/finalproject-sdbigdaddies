@@ -9,7 +9,6 @@ public abstract class PhysicalObject
 {
     protected double mass; //mass of the object in kilograms
     protected double radius; //radius (half the length) of the object in meters
-    
     /**
     * Initializes the both mass and radius of the
     * object with 0.
@@ -34,10 +33,19 @@ public abstract class PhysicalObject
     }
     
     /**
-    * constructor PhysicalObject - initializes the mass and radius of the
-    * object with the passed values.
+    * Returns the value for the moment of inertia of the object in terms 
+    * of kilograms and meters.
+    * 
+    * @return the moment of inertia of the object.
     */
     public abstract double getInertia();
+    
+    /**
+     * Returns the name of the type of object.
+     * 
+     * @return the name of the type of object
+     */
+    public abstract String type();
     
     /**
     * Sets the new mass of the object.

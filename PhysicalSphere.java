@@ -29,4 +29,14 @@ public class PhysicalSphere extends PhysicalObject
     {
         return Math.pow(radius, 2) * mass * 2 / 5;
     }
+    
+    /**
+     * Returns the name of the type of object.
+     * 
+     * @return the name of the type of object
+     */
+    public String type()
+    {
+        return "sphere";
+    }
 }
