@@ -1,4 +1,3 @@
-
 /**
  * Abstract class PhysicalSphere - Sphere object to be rotated in the pendulum.
  *
@@ -16,11 +15,27 @@ public class PhysicalSphere extends PhysicalObject
     */
     public PhysicalSphere(double myMass, double myRadius)
     {
-        super(myMass, myRadius);
+        super(myMass, myRadius, 0);
     }
     
+    /**
+     * Returns the value of the moment of inertia of the object in terms
+     * of kilograms and meters.
+     * 
+     * @return the moment of inertia of the object.
+     */
     public double getInertia()
     {
-        return Math.pow(radius, 2) * mass * 0.4;
+        return Math.pow(radius, 2) * mass * 2 / 5;
+    }
+    
+    /**
+     * Returns the name of the type of object.
+     * 
+     * @return the name of the type of object
+     */
+    public String type()
+    {
+        return "sphere";
     }
 }
