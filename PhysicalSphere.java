@@ -14,9 +14,9 @@ public class PhysicalSphere extends PhysicalObject
     * @param myMass the mass of the object in kilograms
     * @param myRadius the radius (half the length) of the object in meters
     */
-    public PhysicalSphere(double myMass, double myRadius, double myHeight)
+    public PhysicalSphere(double myMass, double myRadius)
     {
-        super(myMass, myRadius, myHeight);
+        super(myMass, myRadius, 0);
     }
     
     /**
