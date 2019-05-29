@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=PhysicalDisk
-comment0.text=\n\ Abstract\ class\ PhysicalDisk\ -\ Cylinder\ object\ to\ be\ rotated\ in\ the\ pendulum.\n\n\ @author\ Omri\ Habot\n\ @version\ 1.0.0\n
-comment1.params=myMass\ myRadius
-comment1.target=PhysicalDisk(double,\ double)
+comment0.text=\n\ Abstract\ class\ PhysicalDisk\ -\ Disk\ object\ to\ be\ rotated\ in\ the\ pendulum.\n\n\ @author\ Omri\ Habot\n\ @version\ 1.0.0\n
+comment1.params=myMass\ myRadius\ myHeight
+comment1.target=PhysicalDisk(double,\ double,\ double)
 comment1.text=\n\ Initializes\ the\ mass\ and\ radius\ of\ the\n\ object\ with\ the\ passed\ values.\n\ \n\ @param\ myMass\ the\ mass\ of\ the\ object\ in\ kilograms.\n\ @param\ myRadius\ the\ radius\ (half\ the\ length)\ of\ the\ object\ in\ meters.\n
 comment2.params=
 comment2.target=double\ getInertia()

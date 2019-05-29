@@ -14,9 +14,9 @@ public class PhysicalRod extends PhysicalObject
     * @param myMass the mass of the object in kilograms.
     * @param myRadius the radius (half the length) of the object in meters.
     */
-    public PhysicalRod(double myMass, double myRadius)
+    public PhysicalRod(double myMass, double myRadius, double myHeight)
     {
-        super(myMass, myRadius);
+        super(myMass, myRadius, myHeight);
     }
     
     /**

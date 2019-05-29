@@ -1,6 +1,6 @@
 
 /**
- * Abstract class PhysicalDisk - Cylinder object to be rotated in the pendulum.
+ * Abstract class PhysicalDisk - Disk object to be rotated in the pendulum.
  *
  * @author Omri Habot
  * @version 1.0.0
@@ -14,9 +14,9 @@ public class PhysicalDisk extends PhysicalObject
     * @param myMass the mass of the object in kilograms.
     * @param myRadius the radius (half the length) of the object in meters.
     */
-    public PhysicalDisk(double myMass, double myRadius)
+    public PhysicalDisk(double myMass, double myRadius, double myHeight)
     {
-        super(myMass, myRadius);
+        super(myMass, myRadius, myHeight);
     }
     
     /**
@@ -37,6 +37,6 @@ public class PhysicalDisk extends PhysicalObject
      */
     public String type()
     {
-        return "cylinder";
+        return "disk";
     }
 }

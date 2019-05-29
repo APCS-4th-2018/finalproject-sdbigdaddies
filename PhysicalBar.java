@@ -8,7 +8,6 @@
 public class PhysicalBar extends PhysicalObject
 {
     private double width; //width of the prism
-    private double height; //height of the prism
     /**
     * Initializes the mass and radius of the
     * object with the passed values.
@@ -18,11 +17,10 @@ public class PhysicalBar extends PhysicalObject
     * @param myWidth the width of the object in meters.
     * @param myHeight the height of the object in meters.
     */
-    public PhysicalBar(double myMass, double myRadius, double myWidth, double myHeight)
+    public PhysicalBar(double myMass, double myRadius, double myHeight, double myWidth)
     {
-        super(myMass, myRadius);
-        myWidth = width;
-        myHeight = height;
+        super(myMass, myRadius, myHeight);
+        width = myWidth;
     }
     
     /**
@@ -44,26 +42,6 @@ public class PhysicalBar extends PhysicalObject
     public String type()
     {
         return "bar";
-    }
-    
-    /**
-    * Sets the new height of the object.
-    * 
-    * @param myHeight the height of the object in meters.
-    */
-    public void setHeight(double myHeight)
-    {
-        height = myHeight;
-    }
-    
-    /**
-    * Returns the height of the object.
-    * 
-    * @return The height of the object in meters.
-    */
-    public double getHeight()
-    {
-        return height;
     }
     
     /**
