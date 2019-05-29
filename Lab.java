@@ -46,20 +46,31 @@ public class Lab
      */
     public double calcAngFreq()
     {
-        // put your code here
-        return x + y;
+     return tor/p.getInertia(); 
     }
     public double calcFreq()
-    {}
+    {
+      return 1/freq;
+    }
     public double calcAlpha()
-    {}
+    {
+     return -(Math.pow(angFreq, 2))*theta*1;
+    }
     public double calcPeriod()
-    {}
+    {
+     return Math.PI*2* Math.sqrt(p.getInertia()/angFreq);
+    }
     public double getFreq()
-    {}
+    {
+        return freq;
+    }
     public double getAlpha()
-    {}
-    public double getFreq()
-    {}
+    {
+        return alpha;
+    }
+    public double getAngFreq()
+    {
+        return angFreq;
+    }
     
 }
