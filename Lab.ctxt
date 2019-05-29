@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Lab
+comment0.text=\r\n\ This\ is\ the\ calss\ modeling\ the\ current\ lab\ set\ up\ the\ user\ desires\ before\r\n\ the\ simulation\ begins\r\n\r\n\ @author\ (Nico\ Cereghini)\r\n\ @version\ (5/28/2019)\r\n
+comment1.params=t\ po\ k
+comment1.target=Lab(double,\ PhysicalObject,\ double)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Lab\ assuming\ user\ wants\ their\ own\ \r\n\ torsional\ constant\r\n
+comment2.params=t\ po
+comment2.target=Lab(double,\ PhysicalObject)
+comment2.text=\r\n\ Constructor\ for\ objects\ of\ class\ Lab\ assuming\ the\r\n\ default\ torsional\ constant\r\n
+comment3.params=
+comment3.target=double\ calcAngFreq()
+comment3.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment4.params=
+comment4.target=double\ calcFreq()
+comment5.params=t
+comment5.target=double\ calcAlpha(double)
+comment6.params=
+comment6.target=double\ calcPeriod()
+comment7.params=
+comment7.target=double\ getFreq()
+comment8.params=
+comment8.target=double\ getAlpha()
+comment9.params=
+comment9.target=double\ getAngFreq()
+numComments=10
