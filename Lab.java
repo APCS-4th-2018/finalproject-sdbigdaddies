@@ -26,6 +26,10 @@ public class Lab
         theta = t;
         p = po;
         tor = k;
+        angFreq = calcAngFreq();
+        freq = calcFreq();
+        period = calcPeriod();
+        alpha = calcAlpha(1);
     }
     /**
      * Constructor for objects of class Lab assuming the
@@ -37,6 +41,10 @@ public class Lab
         theta = t;
         p = po;
         tor = 1; //Lol our default value
+        angFreq = calcAngFreq();
+        freq = calcFreq();
+        period = calcPeriod();
+        alpha = calcAlpha(1);
     }
     /**
      * An example of a method - replace this comment with your own
@@ -52,9 +60,9 @@ public class Lab
     {
       return 1/freq;
     }
-    public double calcAlpha()
+    public double calcAlpha(double t)
     {
-     return -(Math.pow(angFreq, 2))*theta*1;
+     return -(Math.pow(angFreq, 2))*theta*Math.cos(angFreq*t);
     }
     public double calcPeriod()
     {
