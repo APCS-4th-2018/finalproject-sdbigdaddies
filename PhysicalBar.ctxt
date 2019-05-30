@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=PhysicalBar
+comment0.text=\n\ Abstract\ class\ PhysicalBar\ -\ Bar\ object\ to\ be\ rotated\ in\ the\ pendulum.\n\n\ @author\ Omri\ Habot\n\ @version\ 1.0.0\n
+comment1.params=myMass\ myRadius\ myHeight\ myWidth
+comment1.target=PhysicalBar(double,\ double,\ double,\ double)
+comment1.text=\n\ Initializes\ the\ mass\ and\ radius\ of\ the\n\ object\ with\ the\ passed\ values.\n\ \n\ @param\ myMass\ the\ mass\ of\ the\ object\ in\ kilograms.\n\ @param\ myRadius\ the\ radius\ (half\ the\ length)\ of\ the\ object\ in\ meters.\n\ @param\ myWidth\ the\ width\ of\ the\ object\ in\ meters.\n\ @param\ myHeight\ the\ height\ of\ the\ object\ in\ meters.\n
+comment2.params=
+comment2.target=double\ getInertia()
+comment2.text=\n\ Returns\ the\ value\ of\ the\ moment\ of\ inertia\ of\ the\ object\ in\ terms\n\ of\ kilograms\ and\ meters.\n\ \n\ @return\ inertia\ the\ moment\ of\ inertia\ of\ the\ object.\n
+comment3.params=
+comment3.target=java.lang.String\ type()
+comment3.text=\n\ Returns\ the\ name\ of\ the\ type\ of\ object.\n\ \n\ @return\ the\ name\ of\ the\ type\ of\ object\n
+comment4.params=myWidth
+comment4.target=void\ setWidth(double)
+comment4.text=\n\ Sets\ the\ new\ width\ of\ the\ object.\n\ \n\ @param\ width\ The\ width\ of\ the\ object\ in\ meters.\n
+comment5.params=
+comment5.target=double\ getWidth()
+comment5.text=\n\ Returns\ the\ radius\ of\ the\ object.\n\ \n\ @return\ The\ width\ of\ the\ object\ in\ meters.\n
+numComments=6
