@@ -1,14 +1,14 @@
-#Wed May 29 21:48:27 PDT 2019
+#Thu May 30 13:08:24 PDT 2019
 bluej.teamsettings.groupname=
 bluej.teamsettings.git.repositoryPrefix=/APCS-4th-2018/finalproject-sdbigdaddies.git
 bluej.teamsettings.git.protocol=https
 bluej.teamsettings.user=NicoCereghini
 bluej.teamsettings.git.server=github.com
 bluej.teamsettings.yourEmail=david.glozman14@gmail.com
-bluej.teamsettings.ignore8=\\.DS_Store
 bluej.teamsettings.vcs=git
-bluej.teamsettings.ignore7=.*\\\#backup
+bluej.teamsettings.ignore8=\\.DS_Store
 bluej.teamsettings.yourName=David Glozman
+bluej.teamsettings.ignore7=.*\\\#backup
 bluej.teamsettings.ignore6=.*\\\#
 bluej.teamsettings.ignore5=.*\\~
 bluej.teamsettings.ignore4=.*\\.ctxt
