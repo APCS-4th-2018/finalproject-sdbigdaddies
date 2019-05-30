@@ -1,3 +1,4 @@
+
 /**
  * Abstract class PhysicalObject - Parent class for all objects to be rotated.
  *
@@ -7,8 +8,8 @@
 public abstract class PhysicalObject
 {
     protected double mass; //mass of the object in kilograms
+    protected double height; //height of the object in meters
     protected double radius; //radius (half the length) of the object in meters
-    
     /**
     * Initializes the both mass and radius of the
     * object with 0.
@@ -17,6 +18,7 @@ public abstract class PhysicalObject
     {
         mass = 0;
         radius = 0;
+        height = 0;
     }
     
     /**
@@ -26,17 +28,27 @@ public abstract class PhysicalObject
     * @param myMass the mass of the object in kilograms
     * @param myRadius the radius (half the length) of the object in meters
     */
-    public PhysicalObject(double myMass, double myRadius)
+    public PhysicalObject(double myMass, double myRadius, double myHeight)
     {
         mass = myMass;
         radius = myRadius;
+        height = myHeight;
     }
     
     /**
-    * constructor PhysicalObject - initializes the mass and radius of the
-    * object with the passed values.
+    * Returns the value for the moment of inertia of the object in terms 
+    * of kilograms and meters.
+    * 
+    * @return the moment of inertia of the object.
     */
     public abstract double getInertia();
+    
+    /**
+     * Returns the name of the type of object.
+     * 
+     * @return the name of the type of object
+     */
+    public abstract String type();
     
     /**
     * Sets the new mass of the object.
@@ -76,5 +88,25 @@ public abstract class PhysicalObject
     public double getRadius()
     {
         return radius;
+    }
+    
+    /**
+    * Sets the new height of the object.
+    * 
+    * @param myHeight the height of the object in meters.
+    */
+    public void setHeight(double myHeight)
+    {
+        height = myHeight;
+    }
+    
+    /**
+    * Returns the height of the object.
+    * 
+    * @return The height of the object in meters.
+    */
+    public double getHeight()
+    {
+        return height;
     }
 }
