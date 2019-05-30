@@ -8,6 +8,7 @@
 public class PhysicalBar extends PhysicalObject
 {
     private double width; //width of the prism
+    
     /**
     * Initializes the mass and radius of the
     * object with the passed values.
