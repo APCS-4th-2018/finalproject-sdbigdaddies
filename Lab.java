@@ -13,8 +13,7 @@ public class Lab
     private double freq;
     private double period;
     private double tor; //torsional constant
-    private double alpha;
-    private double theta;
+    private double initTheta;
     private PhysicalObject p;
     /**
      * Constructor for objects of class Lab assuming user wants their own 
@@ -23,13 +22,13 @@ public class Lab
     public Lab(double t, PhysicalObject po, double k)
     {
         // initialize instance variables
-        theta = t;
+        initTheta = Math.toRadians(t);
         p = po;
         tor = k;
         angFreq = calcAngFreq();
         freq = calcFreq();
         period = calcPeriod();
-        alpha = calcAlpha(1);
+        
     }
     /**
      * Constructor for objects of class Lab assuming the
@@ -38,13 +37,12 @@ public class Lab
     public Lab(double t, PhysicalObject po)
     {
         // initialize instance variables
-        theta = t;
+        initTheta = Math.toRadians(t);
         p = po;
         tor = 1; //Lol our default value
         angFreq = calcAngFreq();
         freq = calcFreq();
         period = calcPeriod();
-        alpha = calcAlpha(1);
     }
     /**
      * An example of a method - replace this comment with your own
@@ -60,9 +58,9 @@ public class Lab
     {
       return 1/freq;
     }
-    public double calcAlpha(double t)
+    public double calctheta(double time)
     {
-     return -(Math.pow(angFreq, 2))*theta*Math.cos(angFreq*t);
+     return initTheta*Math.cos(angFreq*time);
     }
     public double calcPeriod()
     {
@@ -72,9 +70,9 @@ public class Lab
     {
         return freq;
     }
-    public double getAlpha()
+    public double getTheta()
     {
-        return alpha;
+        return initTheta;
     }
     public double getAngFreq()
     {
