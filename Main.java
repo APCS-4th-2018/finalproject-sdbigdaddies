@@ -17,7 +17,7 @@ public class Main extends Application
 {
     Stage window;
     Scene scene;
-    Button button;
+    
 
     public static void main(String[] args) 
     {
@@ -29,6 +29,8 @@ public class Main extends Application
     {
         window = primaryStage;
         window.setTitle("Mr. Liao's ultra-fun webquet for torsional pendelums!!");
+        
+        Button run = new Button("Run");
         
 
     }
