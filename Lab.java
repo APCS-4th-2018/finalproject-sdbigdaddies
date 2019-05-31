@@ -52,7 +52,7 @@ public class Lab
      */
     public double calcAngFreq()
     {
-     return tor/p.getInertia(); 
+     return Math.sqrt(tor/p.getInertia()); 
     }
     public double calcFreq()
     {
@@ -64,7 +64,7 @@ public class Lab
     }
     public double calcPeriod()
     {
-     return Math.PI*2* Math.sqrt(p.getInertia()/angFreq);
+     return Math.PI*2* Math.sqrt(p.getInertia()/tor);
     }
     public double getFreq()
     {
