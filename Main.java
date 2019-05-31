@@ -28,7 +28,7 @@ public class Main extends Application
     public void start(Stage primaryStage) throws Exception 
     {
         window = primaryStage;
-        
+        window.setTitle("Mr. Liao's ultra-fun webquet for torsional pendelums!!");
         
 
     }
