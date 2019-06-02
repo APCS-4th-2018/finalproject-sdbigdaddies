@@ -63,7 +63,7 @@ public class GUI extends Application
         //Radius Input
         TextField radiusInput = new TextField();
         thetaInput.setPromptText("radius value");
-        GridPane.setConstraints(massInput, 3, 3);
+        GridPane.setConstraints(radiusInput, 3, 3);
         
         //Physical Object Label
         Label pObj = new Label("Physical Object Type:");
@@ -78,6 +78,10 @@ public class GUI extends Application
         Label tConstant = new Label("Torsional Constant:");
         GridPane.setConstraints(tConstant, 5, 2);
         
+        //Torsional Constant input
+        TextField tConstantInput = new TextField();
+        thetaInput.setPromptText("torsional constant value");
+        GridPane.setConstraints(tConstantInput, 3, 3);
         
         //simulation button
         Button create = new Button("Enter");
