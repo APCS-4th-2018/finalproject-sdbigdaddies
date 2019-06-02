@@ -75,6 +75,10 @@ public class GUI extends Application
         GridPane.setConstraints(choiceBox, 4, 3);
         
         //Torsional Constant 
+        Label tConstant = new Label("Torsional Constant:");
+        GridPane.setConstraints(tConstant, 5, 2);
+        
+        
         //simulation button
         Button create = new Button("Enter");
         GridPane.setConstraints(create, 6, 2);
