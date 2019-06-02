@@ -28,5 +28,6 @@ public class GUI extends Application
         window.setTitle("Torsional Pendelum Lab");
         
         GridPane grid = new GridPane();
+        grid.setPadding(new Insets(10, 10, 10, 10));
     }
 }
