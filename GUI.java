@@ -40,8 +40,16 @@ public class GUI extends Application
         
         //intiial theta Input
         TextField thetaInput = new TextField();
-        thetaInput.setPromptText("Enter Intial Theta:");
+        thetaInput.setPromptText("intial theta value");
         GridPane.setConstraints(thetaInput, 1, 3);
+        
+        Label mass = new Label("Mass:");
+        GridPane.setConstraints(initT, 2, 2);
+        
+        TextField massInput = new TextField();
+        thetaInput.setPromptText("mass value");
+        GridPane.setConstraints(thetaInput, 2, 3);
+        
         
     }
 }
