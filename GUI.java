@@ -29,5 +29,7 @@ public class GUI extends Application
         
         GridPane grid = new GridPane();
         grid.setPadding(new Insets(10, 10, 10, 10));
+        grid.setVgap(8);
+        
     }
 }
