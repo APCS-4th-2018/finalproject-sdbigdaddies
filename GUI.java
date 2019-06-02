@@ -26,5 +26,7 @@ public class GUI extends Application
     {
         window = primaryStage;
         window.setTitle("Torsional Pendelum Lab");
+        
+        GridPane grid = new GridPane();
     }
 }
