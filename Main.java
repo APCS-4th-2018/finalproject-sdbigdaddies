@@ -33,7 +33,8 @@ public class Main extends Application
         Button run = new Button("Run");
         
         ChoiceBox<String> itemBox = new ChoiceBox<>();
-
+        itemBox.getItems().addAll("//add stuff");
+        
     }
 }
 
