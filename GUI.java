@@ -31,5 +31,9 @@ public class GUI extends Application
         grid.setPadding(new Insets(10, 10, 10, 10));
         grid.setVgap(8);
         grid.setHgap(10);
+        
+        Label nameLabel = new Label("Mr. Liaos Torisonal Pendelum Experience");
+        GridPane.setConstraints(nameLabel, 0, 5);
+        
     }
 }
