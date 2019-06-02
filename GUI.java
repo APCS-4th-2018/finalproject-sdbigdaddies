@@ -25,6 +25,6 @@ public class GUI extends Application
     public void start(Stage primaryStage) throws Exception
     {
         window = primaryStage;
-        
+        window.setTitle("Torsional Pendelum Lab");
     }
 }
