@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 public class GUI extends Application 
@@ -52,6 +53,10 @@ public class GUI extends Application
         
         Label radius = new Label("Radius:");
         GridPane.setConstraints(radius, 3, 2);
+        
+        TextField radiusInput = new TextField();
+        thetaInput.setPromptText("radius value");
+        GridPane.setConstraints(massInput, 3, 3);
         
         
     }
