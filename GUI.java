@@ -16,7 +16,8 @@ import javafx.stage.Stage;
 public class GUI extends Application 
 {
     Stage window;
+    public static void main(String[] args)
     {
-    
+        launch(args);
     }
 }
