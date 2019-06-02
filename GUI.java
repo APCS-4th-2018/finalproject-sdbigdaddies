@@ -35,5 +35,13 @@ public class GUI extends Application
         Label nameLabel = new Label("Mr. Liaos Torisonal Pendelum Experience");
         GridPane.setConstraints(nameLabel, 0, 5);
         
+        Label initT = new Label("Initial Theta:");
+        GridPane.setConstraints(initT, 1, 2);
+        
+        //intiial theta Input
+        TextField thetaInput = new TextField();
+        thetaInput.setPromptText("Enter Intial Theta:");
+        GridPane.setConstraints(thetaInput, 1, 3);
+        
     }
 }
