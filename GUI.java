@@ -20,4 +20,9 @@ public class GUI extends Application
     {
         launch(args);
     }
+    
+    @Override
+    public void start(Stage primaryStage) throws Exception
+    {
+        
 }
