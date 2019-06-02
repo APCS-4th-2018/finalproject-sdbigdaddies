@@ -58,6 +58,7 @@ public class GUI extends Application
         thetaInput.setPromptText("radius value");
         GridPane.setConstraints(massInput, 3, 3);
         
-        
+        ChoiceBox<String> choiceBox = new ChoiceBox<>();
+        choiceBox.getItems().addAll("Bar", "Rod", "Disk", "Sphere");
     }
 }
