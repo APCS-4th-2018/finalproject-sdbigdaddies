@@ -44,11 +44,14 @@ public class GUI extends Application
         GridPane.setConstraints(thetaInput, 1, 3);
         
         Label mass = new Label("Mass:");
-        GridPane.setConstraints(initT, 2, 2);
+        GridPane.setConstraints(mass, 2, 2);
         
         TextField massInput = new TextField();
         thetaInput.setPromptText("mass value");
-        GridPane.setConstraints(thetaInput, 2, 3);
+        GridPane.setConstraints(massInput, 2, 3);
+        
+        Label radius = new Label("Radius:");
+        GridPane.setConstraints(radius, 3, 2);
         
         
     }
