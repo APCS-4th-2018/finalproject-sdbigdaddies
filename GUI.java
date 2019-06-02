@@ -65,14 +65,19 @@ public class GUI extends Application
         thetaInput.setPromptText("radius value");
         GridPane.setConstraints(massInput, 3, 3);
         
+        //Physical Object Label
+        Label pObj = new Label("Physical Object Type:");
+        GridPane.setConstraints(pObj, 4, 2);
         
-        //physical objects input
+        //Physical Object input
         ChoiceBox<String> choiceBox = new ChoiceBox<>();
         choiceBox.getItems().addAll("Bar", "Rod", "Disk", "Sphere");
         GridPane.setConstraints(choiceBox, 4, 3);
         
+        //Torsional Constant 
         //simulation button
         Button create = new Button("Enter");
-        GridPane.setConstraints(create
+        GridPane.setConstraints(create, 6, 2);
+        
     }
 }
