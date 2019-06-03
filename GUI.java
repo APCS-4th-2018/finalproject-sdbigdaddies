@@ -92,5 +92,6 @@ public class GUI extends Application
         
         Scene scene = new Scene(grid, 700, 600);
         window.setScene(scene);
+        window.show();
     }
 }
