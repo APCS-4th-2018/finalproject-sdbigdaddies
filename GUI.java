@@ -81,11 +81,15 @@ public class GUI extends Application
         //Torsional Constant input
         TextField tConstantInput = new TextField();
         thetaInput.setPromptText("torsional constant value");
-        GridPane.setConstraints(tConstantInput, 3, 3);
+        GridPane.setConstraints(tConstantInput, 5, 3);
         
         //simulation button
         Button create = new Button("Enter");
         GridPane.setConstraints(create, 6, 2);
+        
+        grid.getChildren().addAll(nameLabel, initT, thetaInput, mass, massInput,
+            radius, radiusInput, pObj, choiceBox, tConstant, tConstantInput, create);
+        
         
     }
 }
