@@ -36,56 +36,56 @@ public class GUI extends Application
         
         //title at the top
         Label nameLabel = new Label("Mr. Liaos Torisonal Pendelum Experience");
-        GridPane.setConstraints(nameLabel, 0, 5);
+        GridPane.setConstraints(nameLabel, 0, 0);
         
         //Theta Label
         Label initT = new Label("Initial Theta:");
-        GridPane.setConstraints(initT, 1, 2);
+        GridPane.setConstraints(initT, 1, 1);
         
         //Theta Input
         TextField thetaInput = new TextField();
         thetaInput.setPromptText("intial theta value");
-        GridPane.setConstraints(thetaInput, 1, 3);
+        GridPane.setConstraints(thetaInput, 1, 2);
         
         //Mass Label
         Label mass = new Label("Mass:");
-        GridPane.setConstraints(mass, 2, 2);
-        
+        GridPane.setConstraints(mass, 2, 1);
+       
         //Mass Input
         TextField massInput = new TextField();
         thetaInput.setPromptText("mass value");
-        GridPane.setConstraints(massInput, 2, 3);
+        GridPane.setConstraints(massInput, 2, 2);
         
         //Radius Label
         Label radius = new Label("Radius:");
-        GridPane.setConstraints(radius, 3, 2);
+        GridPane.setConstraints(radius, 3, 1);
         
         //Radius Input
         TextField radiusInput = new TextField();
         thetaInput.setPromptText("radius value");
-        GridPane.setConstraints(radiusInput, 3, 3);
+        GridPane.setConstraints(radiusInput, 3, 2);
         
         //Physical Object Label
         Label pObj = new Label("Physical Object Type:");
-        GridPane.setConstraints(pObj, 4, 2);
+        GridPane.setConstraints(pObj, 3, 1);
         
         //Physical Object input
         ChoiceBox<String> choiceBox = new ChoiceBox<>();
         choiceBox.getItems().addAll("Bar", "Rod", "Disk", "Sphere");
-        GridPane.setConstraints(choiceBox, 4, 3);
+        GridPane.setConstraints(choiceBox, 3, 2);
         
         //Torsional Constant 
         Label tConstant = new Label("Torsional Constant:");
-        GridPane.setConstraints(tConstant, 5, 2);
+        GridPane.setConstraints(tConstant, 4, 1);
         
         //Torsional Constant input
         TextField tConstantInput = new TextField();
         thetaInput.setPromptText("torsional constant value");
-        GridPane.setConstraints(tConstantInput, 5, 3);
+        GridPane.setConstraints(tConstantInput, 4, 2);
         
         //simulation button
         Button create = new Button("Enter");
-        GridPane.setConstraints(create, 6, 2);
+        GridPane.setConstraints(create, 5, 1);
         
         grid.getChildren().addAll(nameLabel, initT, thetaInput, mass, massInput,
             radius, radiusInput, pObj, choiceBox, tConstant, tConstantInput, create);
