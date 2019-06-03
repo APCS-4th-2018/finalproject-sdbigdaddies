@@ -95,7 +95,7 @@ public class GUI extends Application
         ;
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, create);
         
-        Scene scene = new Scene(layout, 500, 600);
+        Scene scene = new Scene(layout, 350, 320);
         window.setScene(scene);
         window.show();
     }
