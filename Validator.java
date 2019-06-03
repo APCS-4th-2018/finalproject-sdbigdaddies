@@ -21,7 +21,16 @@ public class Validator
         {
             isNum = false;
         }
-        
+        else 
+        {
+            try
+            {
+                double num = Double.parseDouble(input.getText());
+                if(num < 0)
+                    isNum = false;
+            }
+            catch (NumberFormatException e) {}
+        }
         return isNum;
     }
 }
