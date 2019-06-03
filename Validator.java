@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 
 public class Validator
 {
-    public static boolean isInt(TextField input, Label inputLabel, String validText)
+    public static boolean isInt(TextField input)
     {
         boolean isNum = true;
         String text = null;
@@ -20,8 +20,8 @@ public class Validator
         if(!input.getText().matches("[0-9]+"))
         {
             isNum = false;
-            text = validText;
         }
-        return isAlpha;
+        
+        return isNum;
     }
 }
