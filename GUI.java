@@ -35,12 +35,13 @@ public class GUI extends Application
         HBox row3 = new HBox(5);
         HBox row4 = new HBox(5);
         HBox row5 = new HBox(5);
+        HBox row6 = new HBox(5);
         
         layout  = new VBox(15);
         layout.setPadding(new Insets(20, 20, 20, 20));
         
         //title at the top
-        Label nameLabel = new Label("Mr. Liaos Torisonal Pendelum Experience");
+        Label nameLabel = new Label("Mr. Liao's Torisonal Pendelum Experience");
        
         //Theta Label
         Label initT = new Label("Initial Theta:");
@@ -69,7 +70,7 @@ public class GUI extends Application
         TextField radiusInput = new TextField();
         radiusInput.setPromptText("radius value");
         
-        //creates row 3 
+        //creates row 3
         row3.getChildren().addAll(radius, radiusInput);
         
         //Physical Object Label
@@ -92,18 +93,28 @@ public class GUI extends Application
         //creates row 5
         row5.getChildren().addAll(tConstant, tConstantInput);
         
+        //Height constant input
+        Label height = new Label("Height:");
+         
+        //Height input
+        TextField heightInput = new TextField();
+        heightInput.setPromptText("height value");
+        
+        //creates row 6
+        row5.getChildren().addAll(height, heightInput);
+        
         //simulation button
         Button create = new Button("Enter");
-        create.setOnAction(e -> {checkInput(massInput, radiusInput, thetaInput, tConstantInput);});
+        create.setOnAction(e -> {checkInput(massInput, radiusInput, thetaInput, tConstantInput, heightInput);});
         
-        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, create);
+        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, row6, create);
         
         scene = new Scene(layout, 350, 320);
         window.setScene(scene);
         window.show();
     }
     
-    private void checkInput(TextField mass, TextField radius, TextField angle, TextField torque)
+    private void checkInput(TextField mass, TextField radius, TextField angle, TextField torque, TextField height)
     {
         boolean check = true;
         
