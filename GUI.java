@@ -105,16 +105,18 @@ public class GUI extends Application
         
         //simulation button
         Button create = new Button("Enter");
-        create.setOnAction(e -> {checkInput(massInput, radiusInput, thetaInput, tConstantInput, heightInput);});
+        create.setOnAction(e -> {checkInput(massInput, radiusInput, thetaInput, tConstantInput, heightInput, 
+            choiceBox.getValue());});
         
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, row6, create);
         
-        scene = new Scene(layout, 350, 320);
+        scene = new Scene(layout, 350, 400);
         window.setScene(scene);
         window.show();
     }
     
-    private void checkInput(TextField mass, TextField radius, TextField angle, TextField torque, TextField height)
+    private void checkInput(TextField mass, TextField radius, TextField angle, TextField torque, 
+        TextField height, String phobInput)
     {
         boolean check = true;
         
@@ -130,7 +132,8 @@ public class GUI extends Application
         if(!Validator.isInt(torque))
             layout.getChildren().add(new Label("Error: Torsional constant must be a positive and numerical value"));
             
-        Lab run = new Lab(mass.getText(), radius.getText(), angle.getText(), torque.getText());
+        PhysicalObject phob = new PhysicalObject(mass.getText(), radius.getText(), height.getText());
+        Lab run = new Lab(angle.getValue(), phob, torque.getText());
             
     }
 }
