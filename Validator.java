@@ -12,12 +12,12 @@ import java.util.regex.Pattern;
 
 public class Validator
 {
-    public static boolean isInt(TextField input)
+    private static boolean isInt(TextField input)
     {
         boolean isNum = true;
         String text = null;
         
-        if(!input.getText().matches("[0-9]+"))
+        if(!input.getText().matches("[0-9]+") || input.getText().equals("") || input.getText().equals(null))
         {
             isNum = false;
         }
@@ -29,8 +29,15 @@ public class Validator
                 if(num < 0)
                     isNum = false;
             }
-            catch (NumberFormatException e) {}
+            catch (NumberFormatException e) {isNum = false;}
         }
         return isNum;
+    }
+    
+    public static void checkInput(TextField mass, TextField radius, TextField angle, TextField torque)
+    {
+        boolean check = true;
+        
+        if(
     }
 }
