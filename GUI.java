@@ -109,7 +109,17 @@ public class GUI extends Application
         
         if(!Validator.isInt(mass))
             layout.getChildren().add(new Label("Error: Mass must be a positive and numerical value"));
-        
+            
+        if(!Validator.isInt(radius))
+            layout.getChildren().add(new Label("Error: Radius must be a positive and numerical value"));
+            
+        if(!Validator.isInt(angle))
+            layout.getChildren().add(new Label("Error: Angle must be a positive and numerical value"));
+            
+        if(!Validator.isInt(torque))
+            layout.getChildren().add(new Label("Error: Torsional constant must be a positive and numerical value"));
+            
+        Lab run = new Lab(mass.getText(), radius.getText(), angle.getText(), torque.getText());
             
     }
 }
