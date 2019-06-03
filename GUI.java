@@ -90,6 +90,7 @@ public class GUI extends Application
         grid.getChildren().addAll(nameLabel, initT, thetaInput, mass, massInput,
             radius, radiusInput, pObj, choiceBox, tConstant, tConstantInput, create);
         
-        Scene scene = new Scene(grid, 300, 200);
+        Scene scene = new Scene(grid, 700, 600);
+        window.setScene(scene);
     }
 }
