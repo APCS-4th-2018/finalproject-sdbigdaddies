@@ -26,11 +26,11 @@ public class GUI extends Application
         window = primaryStage;
         window.setTitle("Torsional Pendelum Lab");
         
-        HBox row1 = new HBox();
-        HBox row2 = new HBox();
-        HBox row3 = new HBox();
-        HBox row4 = new HBox();
-        HBox row5 = new HBox();
+        HBox row1 = new HBox(5);
+        HBox row2 = new HBox(5);
+        HBox row3 = new HBox(5);
+        HBox row4 = new HBox(5);
+        HBox row5 = new HBox(5);
         
         VBox layout  = new VBox(15);
         layout.setPadding(new Insets(20, 20, 20, 20));
