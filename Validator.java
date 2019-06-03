@@ -17,6 +17,10 @@ public class Validator
         boolean isAlpha = true;
         String text = null;
         
+        if(!input.getText().matches("[a-z A-Z]+"))
+        {
+            
+        }
         return isAlpha;
     }
 }
