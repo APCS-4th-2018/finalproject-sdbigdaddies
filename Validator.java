@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 
 public class Validator
 {
-    private static boolean isInt(TextField input)
+    public static boolean isInt(TextField input)
     {
         boolean isNum = true;
         String text = null;
@@ -34,10 +34,5 @@ public class Validator
         return isNum;
     }
     
-    public static void checkInput(TextField mass, TextField radius, TextField angle, TextField torque)
-    {
-        boolean check = true;
-        
-        if(
-    }
+    
 }

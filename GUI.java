@@ -16,6 +16,9 @@ import javafx.scene.control.*;
 public class GUI extends Application 
 {
     Stage window;
+    Scene scene;
+    VBox layout;
+    
     public static void main(String[] args)
     {
         launch(args);
@@ -33,7 +36,7 @@ public class GUI extends Application
         HBox row4 = new HBox(5);
         HBox row5 = new HBox(5);
         
-        VBox layout  = new VBox(15);
+        layout  = new VBox(15);
         layout.setPadding(new Insets(20, 20, 20, 20));
         
         //title at the top
@@ -91,12 +94,22 @@ public class GUI extends Application
         
         //simulation button
         Button create = new Button("Enter");
-        create.setOnAction(e -> {Validator.checkInput();});
+        create.setOnAction(e -> {checkInput(massInput, radiusInput, thetaInput, tConstantInput);});
         
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, create);
         
-        Scene scene = new Scene(layout, 350, 320);
+        scene = new Scene(layout, 350, 320);
         window.setScene(scene);
         window.show();
+    }
+    
+    private void checkInput(TextField mass, TextField radius, TextField angle, TextField torque)
+    {
+        boolean check = true;
+        
+        if(!Validator.isInt(mass))
+            layout.getChildren().add(new Label("Error: Mass must be a positive and numerical value"));
+        
+            
     }
 }
