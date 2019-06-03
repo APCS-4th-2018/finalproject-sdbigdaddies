@@ -14,12 +14,13 @@ public class Validator
 {
     public static boolean isInt(TextField input, Label inputLabel, String validText)
     {
-        boolean isAlpha = true;
+        boolean isNum = true;
         String text = null;
         
-        if(!input.getText().matches("[a-z A-Z]+"))
+        if(!input.getText().matches("[0-9]+"))
         {
-            
+            isNum = false;
+            text = validText;
         }
         return isAlpha;
     }
