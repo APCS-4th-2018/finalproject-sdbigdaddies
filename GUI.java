@@ -37,12 +37,10 @@ public class GUI extends Application
         
         //title at the top
         Label nameLabel = new Label("Mr. Liaos Torisonal Pendelum Experience");
-        
-        
+       
         //Theta Label
         Label initT = new Label("Initial Theta:");
        
-        
         //Theta Input
         TextField thetaInput = new TextField();
         thetaInput.setPromptText("intial theta value");
@@ -92,7 +90,7 @@ public class GUI extends Application
         
         //simulation button
         Button create = new Button("Enter");
-        ;
+        
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, create);
         
         Scene scene = new Scene(layout, 350, 320);
