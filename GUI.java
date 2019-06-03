@@ -91,7 +91,7 @@ public class GUI extends Application
         
         //simulation button
         Button create = new Button("Enter");
-        
+        button.setOnAction(e -> Validator.isInt(
         
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, create);
         
