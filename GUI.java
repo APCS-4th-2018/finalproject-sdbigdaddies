@@ -12,6 +12,7 @@ import javafx.stage.*;
 import javafx.scene.*;
 import javafx.scene.layout.*;
 import javafx.scene.control.*;
+
 public class GUI extends Application 
 {
     Stage window;
@@ -90,6 +91,7 @@ public class GUI extends Application
         
         //simulation button
         Button create = new Button("Enter");
+        
         
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, create);
         
