@@ -15,6 +15,8 @@ public class Validator
     public static boolean isInt(TextField input, Label inputLabel, String validText)
     {
         boolean isAlpha = true;
+        String text = null;
+        
         return isAlpha;
     }
 }
