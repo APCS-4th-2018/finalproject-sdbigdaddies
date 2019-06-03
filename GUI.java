@@ -5,15 +5,13 @@
  * @author (David Glozman)
  * @version (052419)
  */
-import javafx.application.Application;
 import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.application.*;
+import javafx.stage.*;
+import javafx.scene.*;
+import javafx.scene.layout.*;
+import javafx.scene.control.*;
 public class GUI extends Application 
 {
     Stage window;
@@ -28,69 +26,76 @@ public class GUI extends Application
         window = primaryStage;
         window.setTitle("Torsional Pendelum Lab");
         
-        //create layout
-        GridPane grid = new GridPane();
-        grid.setPadding(new Insets(10, 10, 10, 10));
-        grid.setVgap(8);
-        grid.setHgap(10);
+        HBox row1 = new HBox();
+        HBox row2 = new HBox();
+        HBox row3 = new HBox();
+        HBox row4 = new HBox();
+        HBox row5 = new HBox();
+        
+        VBox layout  = new VBox(15);
+        layout.setPadding(new Insets(20, 20, 20, 20));
         
         //title at the top
         Label nameLabel = new Label("Mr. Liaos Torisonal Pendelum Experience");
-        GridPane.setConstraints(nameLabel, 0, 0);
+        
         
         //Theta Label
         Label initT = new Label("Initial Theta:");
-        GridPane.setConstraints(initT, 1, 1);
+       
         
         //Theta Input
         TextField thetaInput = new TextField();
         thetaInput.setPromptText("intial theta value");
-        GridPane.setConstraints(thetaInput, 1, 2);
+        
+        //creates row one
+        row1.getChildren().addAll(initT, thetaInput);
         
         //Mass Label
         Label mass = new Label("Mass:");
-        GridPane.setConstraints(mass, 2, 1);
        
         //Mass Input
         TextField massInput = new TextField();
-        thetaInput.setPromptText("mass value");
-        GridPane.setConstraints(massInput, 2, 2);
+        massInput.setPromptText("mass value");
+        
+        //creates row 2
+        row2.getChildren().addAll(mass, massInput);
         
         //Radius Label
         Label radius = new Label("Radius:");
-        GridPane.setConstraints(radius, 3, 1);
         
         //Radius Input
         TextField radiusInput = new TextField();
-        thetaInput.setPromptText("radius value");
-        GridPane.setConstraints(radiusInput, 3, 2);
+        radiusInput.setPromptText("radius value");
+        
+        //creates row 3 
+        row3.getChildren().addAll(radius, radiusInput);
         
         //Physical Object Label
         Label pObj = new Label("Physical Object Type:");
-        GridPane.setConstraints(pObj, 3, 1);
         
         //Physical Object input
         ChoiceBox<String> choiceBox = new ChoiceBox<>();
         choiceBox.getItems().addAll("Bar", "Rod", "Disk", "Sphere");
-        GridPane.setConstraints(choiceBox, 3, 2);
+        
+        //creates row 4 
+        row4.getChildren().addAll(pObj, choiceBox);
         
         //Torsional Constant 
         Label tConstant = new Label("Torsional Constant:");
-        GridPane.setConstraints(tConstant, 4, 1);
         
         //Torsional Constant input
         TextField tConstantInput = new TextField();
-        thetaInput.setPromptText("torsional constant value");
-        GridPane.setConstraints(tConstantInput, 4, 2);
+        tConstantInput.setPromptText("torsional constant value");
+        
+        //creates row 5
+        row5.getChildren().addAll(tConstant, tConstantInput);
         
         //simulation button
         Button create = new Button("Enter");
-        GridPane.setConstraints(create, 5, 1);
+        ;
+        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, create);
         
-        grid.getChildren().addAll(nameLabel, initT, thetaInput, mass, massInput,
-            radius, radiusInput, pObj, choiceBox, tConstant, tConstantInput, create);
-        
-        Scene scene = new Scene(grid, 700, 600);
+        Scene scene = new Scene(layout, 500, 600);
         window.setScene(scene);
         window.show();
     }
