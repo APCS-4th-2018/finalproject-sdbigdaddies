@@ -16,7 +16,7 @@ import javafx.scene.control.*;
 public class GUI extends Application 
 {
     Stage window;
-    Scene scene;
+    Scene menu, scene;
     VBox layout;
     
     public static void main(String[] args)
@@ -30,6 +30,11 @@ public class GUI extends Application
         window = primaryStage;
         window.setTitle("Torsional Pendelum Lab");
         
+        HBox selection = new HBox(15);
+        selection.setAlignment(Pos.CENTER);
+        BUtton
+        
+        selection.setPadding(new Insets(20,20,20,20));
         HBox row1 = new HBox(5);
         HBox row2 = new HBox(5);
         HBox row3 = new HBox(5);
@@ -132,7 +137,14 @@ public class GUI extends Application
         if(!Validator.isInt(torque))
             layout.getChildren().add(new Label("Error: Torsional constant must be a positive and numerical value"));
             
-        PhysicalObject phob = new PhysicalObject(mass.getText(), radius.getText(), height.getText());
+        if(phobInput.equals("Rod"))
+            
+        if(phobInput.equals("Bar"))
+        
+        if(phobInput.equals("Disk"))
+        
+        if(phobInput.equals("Sphere"))
+        
         Lab run = new Lab(angle.getValue(), phob, torque.getText());
             
     }
