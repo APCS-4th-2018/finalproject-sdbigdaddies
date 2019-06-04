@@ -37,6 +37,11 @@ public class GUI extends Application
         Button disk = new Button("Disk");
         Button Sphere = new Button("Sphere");
         
+        selection.getChildren().addAll(bar, rod, disk, sphere);
+        
+        menu = new Scene(selection, 200, 700);
+        window.setScene(menu);
+        window.show();
         
         selection.setPadding(new Insets(20,20,20,20));
         HBox row1 = new HBox(5);
