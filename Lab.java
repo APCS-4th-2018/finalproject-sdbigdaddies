@@ -1,4 +1,3 @@
-
 /**
  * This is the calss modeling the current lab set up the user desires before
  * the simulation begins
