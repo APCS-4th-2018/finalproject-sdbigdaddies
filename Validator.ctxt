@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Validator
+comment1.params=input
+comment1.target=boolean\ isInt(javafx.scene.control.TextField)
+numComments=2

@@ -1,4 +1,3 @@
-
 /**
  * Abstract class PhysicalObject - Parent class for all objects to be rotated.
  *
