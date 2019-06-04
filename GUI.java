@@ -32,7 +32,11 @@ public class GUI extends Application
         
         HBox selection = new HBox(15);
         selection.setAlignment(Pos.CENTER);
-        BUtton
+        Button bar = new Button("Bar");
+        Button rod = new Button("Rod");
+        Button disk = new Button("Disk");
+        Button Sphere = new Button("Sphere");
+        
         
         selection.setPadding(new Insets(20,20,20,20));
         HBox row1 = new HBox(5);
