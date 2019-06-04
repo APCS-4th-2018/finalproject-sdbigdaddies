@@ -5,7 +5,7 @@
  * @author (David Glozman)
  * @version (052419)
  */
-import javafx.geometry.Insets;
+import javafx.geometry.*;
 import javafx.stage.Stage;
 import javafx.application.*;
 import javafx.stage.*;
@@ -32,18 +32,39 @@ public class GUI extends Application
         
         HBox selection = new HBox(15);
         selection.setAlignment(Pos.CENTER);
+        
         Button bar = new Button("Bar");
+        bar.setOnAction(e -> barIn());
+        
         Button rod = new Button("Rod");
+        rod.setOnAction(e -> rodIn());
+        
         Button disk = new Button("Disk");
-        Button Sphere = new Button("Sphere");
+        disk.setOnAction(e -> diskIn());
+        
+        Button sphere = new Button("Sphere");
+        sphere.setOnAction(e -> sphereIn());
         
         selection.getChildren().addAll(bar, rod, disk, sphere);
+        
+        
+        
         
         menu = new Scene(selection, 200, 700);
         window.setScene(menu);
         window.show();
         
-        selection.setPadding(new Insets(20,20,20,20));
+        
+    
+        
+        
+    }
+    
+    private void barIn()
+    {    
+        layout  = new VBox(15);
+        layout.setPadding(new Insets(20, 20, 20, 20));
+       
         HBox row1 = new HBox(5);
         HBox row2 = new HBox(5);
         HBox row3 = new HBox(5);
@@ -51,11 +72,8 @@ public class GUI extends Application
         HBox row5 = new HBox(5);
         HBox row6 = new HBox(5);
         
-        layout  = new VBox(15);
-        layout.setPadding(new Insets(20, 20, 20, 20));
-        
         //title at the top
-        Label nameLabel = new Label("Mr. Liao's Torisonal Pendelum Experience");
+        Label nameLabel = new Label("Bar");
        
         //Theta Label
         Label initT = new Label("Initial Theta:");
@@ -87,16 +105,6 @@ public class GUI extends Application
         //creates row 3
         row3.getChildren().addAll(radius, radiusInput);
         
-        //Physical Object Label
-        Label pObj = new Label("Physical Object Type:");
-        
-        //Physical Object input
-        ChoiceBox<String> choiceBox = new ChoiceBox<>();
-        choiceBox.getItems().addAll("Bar", "Rod", "Disk", "Sphere");
-        
-        //creates row 4 
-        row4.getChildren().addAll(pObj, choiceBox);
-        
         //Torsional Constant 
         Label tConstant = new Label("Torsional Constant:");
         
@@ -104,7 +112,7 @@ public class GUI extends Application
         TextField tConstantInput = new TextField();
         tConstantInput.setPromptText("torsional constant value");
         
-        //creates row 5
+        //creates row 4
         row5.getChildren().addAll(tConstant, tConstantInput);
         
         //Height constant input
@@ -114,47 +122,29 @@ public class GUI extends Application
         TextField heightInput = new TextField();
         heightInput.setPromptText("height value");
         
-        //creates row 6
+        //creates row 5
         row5.getChildren().addAll(height, heightInput);
+        
+        //Width constant input
+        Label width = new Label("Width:");
+         
+        //Width input
+        TextField widthInput = new TextField();
+        widthInput.setPromptText("width value");
+        
+        //creates row 6
+        row6.getChildren().addAll(width, widthInput);
         
         //simulation button
         Button create = new Button("Enter");
-        create.setOnAction(e -> {checkInput(massInput, radiusInput, thetaInput, tConstantInput, heightInput, 
-            choiceBox.getValue());});
+        
         
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, row6, create);
         
-        scene = new Scene(layout, 350, 400);
-        window.setScene(scene);
+        Scene barScene = new Scene(layout, 350, 400);
+        window.setScene(barScene);
         window.show();
     }
     
-    private void checkInput(TextField mass, TextField radius, TextField angle, TextField torque, 
-        TextField height, String phobInput)
-    {
-        boolean check = true;
-        
-        if(!Validator.isInt(mass))
-            layout.getChildren().add(new Label("Error: Mass must be a positive and numerical value"));
-            
-        if(!Validator.isInt(radius))
-            layout.getChildren().add(new Label("Error: Radius must be a positive and numerical value"));
-            
-        if(!Validator.isInt(angle))
-            layout.getChildren().add(new Label("Error: Angle must be a positive and numerical value"));
-            
-        if(!Validator.isInt(torque))
-            layout.getChildren().add(new Label("Error: Torsional constant must be a positive and numerical value"));
-            
-        if(phobInput.equals("Rod"))
-            
-        if(phobInput.equals("Bar"))
-        
-        if(phobInput.equals("Disk"))
-        
-        if(phobInput.equals("Sphere"))
-        
-        Lab run = new Lab(angle.getValue(), phob, torque.getText());
-            
-    }
+    private
 }
