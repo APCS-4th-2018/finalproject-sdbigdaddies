@@ -1,30 +1,20 @@
-<<<<<<< HEAD
-#Tue Jun 04 14:08:16 PDT 2019
+#Wed Jun 05 13:01:35 PDT 2019
+=\=\=\=\=\=\=
 bluej.teamsettings.groupname=
 bluej.teamsettings.ignore1=.*\\.class
 bluej.teamsettings.yourName=Nico Cereghini
 bluej.teamsettings.git.server=github.com
 bluej.teamsettings.yourEmail=nicola.cereghini@gmail.com
 bluej.teamsettings.git.repositoryPrefix=/APCS-4th-2018/finalproject-sdbigdaddies.git
-=======
-#Sun Jun 02 16:07:52 PDT 2019
-bluej.teamsettings.yourEmail=david.glozman14@gmail.com
->>>>>>> 3051641da4bbea3690595d3c3996eb601d1480ce
+>>>>>>>=aea88a33eaf48d88ed0d7dcb70d914feed6a4149
 bluej.teamsettings.vcs=git
 bluej.teamsettings.user=NicoCereghini
-bluej.teamsettings.groupname=
->>>>>>>=aea88a33eaf48d88ed0d7dcb70d914feed6a4149
-bluej.teamsettings.ignore8=\\.DS_Store
-bluej.teamsettings.ignore7=.*\\\#backup
-<<<<<<<=HEAD
-bluej.teamsettings.ignore6=.*\\\#
-bluej.teamsettings.ignore5=.*\\~
-bluej.teamsettings.ignore4=.*\\.ctxt
 bluej.teamsettings.ignore3=team\\.defs
 bluej.teamsettings.ignore2=bluej\\.pkh
-bluej.teamsettings.git.repositoryPrefix=/APCS-4th-2018/finalproject-sdbigdaddies.git
-bluej.teamsettings.ignore1=.*\\.class
+bluej.teamsettings.ignore5=.*\\~
+bluej.teamsettings.ignore4=.*\\.ctxt
+bluej.teamsettings.ignore7=.*\\\#backup
+bluej.teamsettings.ignore6=.*\\\#
+<<<<<<<=HEAD
+bluej.teamsettings.ignore8=\\.DS_Store
 bluej.teamsettings.git.protocol=https
-bluej.teamsettings.yourName=David Glozman
-bluej.teamsettings.git.server=github.com
-=\=\=\=\=\=\=
