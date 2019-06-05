@@ -34,19 +34,29 @@ public class Validator
         return isNum;
     }
     
-    public static boolean diskrodCheck(TextField theta, TextField mass, TextField radius, TextField tc, TextField height)
+    public boolean diskrodCheck(TextField theta, TextField mass, TextField radius, TextField tc, TextField height)
     {
         boolean check = true; 
-        if()
+        if(!isInt(theta))
+        {
             check = false;
-        if()
+        }
+        if(!isInt(mass))
+        {
             check = false;
-        if()
+        }
+        if(!isInt(radius))
+        {
             check = false;
-        if()
+        }
+        if(!isInt(tc))
+        {
             check = false;
-        if()
+        }
+        if(!isInt(height))
+        {
             check = false;
+        }
             
         return check;
     }
