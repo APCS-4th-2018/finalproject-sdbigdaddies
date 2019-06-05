@@ -66,7 +66,10 @@ public class Validator
             error.getChildren().add(new Label("Invalid Height: Height must be positive and a numerical value"));
         }
         
-        if(ch
+        if(check == false)
+        {
+            A
+        }
             
         return check;
     }
