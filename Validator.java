@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 
 public class Validator
 {
-    public static boolean isInt(TextField input)
+    private boolean isInt(TextField input)
     {
         boolean isNum = true;
         String text = null;
@@ -33,6 +33,16 @@ public class Validator
         }
         return isNum;
     }
+    
+    public static boolean diskrodCheck(TextField theta, TextField mass, TextField radius, TextField tc, TextField height)
+    {
+        boolean check = true; 
+        return check;
+    }
+    
+    
+    
+    
     
     
 }
