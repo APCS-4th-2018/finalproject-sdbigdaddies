@@ -51,7 +51,7 @@ public class GUI extends Application
         
         
         menu = new Scene(selection, 700, 700);
-        menu.getStyleSheets().add(getClass().getResourse("FXStyling.css").toExternalForm());
+        menu.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(menu);
         window.show();
         

@@ -10,9 +10,10 @@ import javafx.scene.*;
 import javafx.scene.layout.*;
 import javafx.scene.control.*;
 import javafx.geometry.*;
+import javafx.application.*;
 public class AlertBox
 {
-     public static void display(VBox layout) 
+     public void display(VBox layout) 
     {
         Stage window = new Stage();
 
@@ -31,6 +32,7 @@ public class AlertBox
         
         //Display window and wait for it to be closed before returning
         Scene scene = new Scene(layout);
+        scene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(scene);
         window.showAndWait();
     }
