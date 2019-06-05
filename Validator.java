@@ -37,6 +37,17 @@ public class Validator
     public static boolean diskrodCheck(TextField theta, TextField mass, TextField radius, TextField tc, TextField height)
     {
         boolean check = true; 
+        if()
+            check = false;
+        if()
+            check = false;
+        if()
+            check = false;
+        if()
+            check = false;
+        if()
+            check = false;
+            
         return check;
     }
     
