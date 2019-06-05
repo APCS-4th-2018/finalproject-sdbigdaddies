@@ -16,7 +16,7 @@ import javafx.scene.control.*;
 public class GUI extends Application 
 {
     Stage window;
-    Scene menu, scene;
+    Scene menu;
     VBox layout;
     
     public static void main(String[] args)
@@ -51,6 +51,7 @@ public class GUI extends Application
         
         
         menu = new Scene(selection, 700, 700);
+        menu.getStyleSheets().add(getClass().getResourse("FXStyling.css").toExternalForm());
         window.setScene(menu);
         window.show();
         
@@ -143,6 +144,7 @@ public class GUI extends Application
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, row6, create, back);
         
         Scene barScene = new Scene(layout, 350, 400);
+        barScene.getStyleSheets().add(getClass().getResourse("FXStyling.css").toExternalForm());
         window.setScene(barScene);
         window.show();
     }
@@ -219,6 +221,7 @@ public class GUI extends Application
        do
        {
              Scene diskrodScene = new Scene(layout, 350, 400);
+             diskrodScene.getStyleSheets().add(getClass().getResourse("FXStyling.css").toExternalForm());
              window.setScene(diskrodScene);
              window.show();
        }
@@ -291,6 +294,7 @@ public class GUI extends Application
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, create);
         
         Scene sphereScene = new Scene(layout, 350, 400);
+        sphereScene.getStyleSheets().add(getClass().getResourse("FXStyling.css").toExternalForm());
         window.setScene(sphereScene);
         window.show();
     }
