@@ -9,10 +9,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javafx.scene.layout.*;
 
 public class Validator
 {
-    public static boolean isInt(TextField input)
+    private boolean isInt(TextField input)
     {
         boolean isNum = true;
         String text = null;
@@ -33,6 +34,49 @@ public class Validator
         }
         return isNum;
     }
+    
+    public boolean diskrodCheck(TextField theta, TextField mass, TextField radius, TextField tc, TextField height)
+    {
+        boolean check = true; 
+        VBox error = new VBox(8);
+        
+        if(!isInt(theta))
+        {
+            check = false;
+            error.getChildren().add(new Label("Invalid Theta: Theta must be positive and a numerical value"));
+        }
+        if(!isInt(mass))
+        {
+            check = false;
+            error.getChildren().add(new Label("Invalid Mass: Mass must be positive and a numerical value"));
+        }
+        if(!isInt(radius))
+        {
+            check = false;
+            error.getChildren().add(new Label("Invalid Radius: Radius must be positive and a numerical value"));
+        }
+        if(!isInt(tc))
+        {
+            check = false;
+            error.getChildren().add(new Label("Invalid Torsional Constant: Constant must be positive and a numerical value"));
+        }
+        if(!isInt(height))
+        {
+            check = false;
+            error.getChildren().add(new Label("Invalid Height: Height must be positive and a numerical value"));
+        }
+        
+        if(check == false)
+        {
+            A
+        }
+            
+        return check;
+    }
+    
+    
+    
+    
     
     
 }

@@ -16,7 +16,7 @@ import javafx.scene.control.*;
 public class GUI extends Application 
 {
     Stage window;
-    Scene menu, scene;
+    Scene menu;
     VBox layout;
     
     public static void main(String[] args)
@@ -50,7 +50,8 @@ public class GUI extends Application
         
         
         
-        menu = new Scene(selection, 200, 700);
+        menu = new Scene(selection, 700, 700);
+        menu.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(menu);
         window.show();
         
@@ -138,10 +139,12 @@ public class GUI extends Application
         //simulation button
         Button create = new Button("Enter");
         
+        Button back = new Button("Back");
         
-        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, row6, create);
+        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, row6, create, back);
         
         Scene barScene = new Scene(layout, 350, 400);
+        barScene.getStyleSheets().add(getClass().getResourse("FXStyling.css").toExternalForm());
         window.setScene(barScene);
         window.show();
     }
@@ -156,6 +159,7 @@ public class GUI extends Application
         HBox row3 = new HBox(5);
         HBox row4 = new HBox(5);
         HBox row5 = new HBox(5);
+        HBox row6 = new HBox(5);
         
         //title at the top
         Label nameLabel = new Label(title);
@@ -208,17 +212,26 @@ public class GUI extends Application
         heightInput.setPromptText("height value");
         
         //creates row 5
-        row5.getChildren().addAll(height, heightInput);
+        row6.getChildren().addAll(height, heightInput);
         
         //simulation button
         Button create = new Button("Enter");
+        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5,row6, create);
+        
+       do
+       {
+             Scene diskrodScene = new Scene(layout, 350, 400);
+             diskrodScene.getStyleSheets().add(getClass().getResourse("FXStyling.css").toExternalForm());
+             window.setScene(diskrodScene);
+             window.show();
+       }
+       while();
         
         
-        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, create);
         
-        Scene diskrodScene = new Scene(layout, 350, 400);
-        window.setScene(diskrodScene);
-        window.show();
+        
+        
+       
     }
     
     private void sphereIn()
@@ -272,7 +285,7 @@ public class GUI extends Application
         tConstantInput.setPromptText("torsional constant value");
         
         //creates row 4
-        row5.getChildren().addAll(tConstant, tConstantInput);
+        row4.getChildren().addAll(tConstant, tConstantInput);
         
         //simulation button
         Button create = new Button("Enter");
@@ -280,8 +293,9 @@ public class GUI extends Application
         
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, create);
         
-        Scene rodScene = new Scene(layout, 350, 400);
-        window.setScene(rodScene);
+        Scene sphereScene = new Scene(layout, 350, 400);
+        sphereScene.getStyleSheets().add(getClass().getResourse("FXStyling.css").toExternalForm());
+        window.setScene(sphereScene);
         window.show();
     }
 }
