@@ -68,7 +68,8 @@ public class Validator
         
         if(check == false)
         {
-            A
+            AlertBox a = new AlertBox();
+            a.display(error);
         }
             
         return check;
