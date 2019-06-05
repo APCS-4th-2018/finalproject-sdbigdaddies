@@ -12,12 +12,12 @@ import javafx.scene.control.*;
 import javafx.geometry.*;
 public class AlertBox
 {
-     public static void display(String title, String message) {
+     public static void display() {
         Stage window = new Stage();
 
         //Block events to other windows
         window.initModality(Modality.APPLICATION_MODAL);
-        window.setTitle(title);
+        window.setTitle("ERROR: Input");
         window.setMinWidth(250);
 
         Label label = new Label();
