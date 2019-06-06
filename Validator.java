@@ -151,6 +151,12 @@ public class Validator
             error.getChildren().add(new Label("Invalid Height: Height must be positive and a numerical value"));
         }
         
+        if(!isInt(width))
+        {
+            check = false;
+            error.getChildren().add(new Label("Invalid Width: Width must be positive and a numerical value"));
+        }
+        
         if(check == false)
         {
             AlertBox a = new AlertBox();
