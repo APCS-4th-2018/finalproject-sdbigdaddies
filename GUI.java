@@ -31,29 +31,34 @@ public class GUI extends Application
      */
     public void start(Stage primaryStage) throws Exception
     {
+        //creates initial scene with tital torsional pendelum lab
         window = primaryStage;
         window.setTitle("Torsional Pendelum Lab");
         
+        //creates a horizontal layout that is centered
         HBox selection = new HBox(15);
         selection.setAlignment(Pos.CENTER);
         
+        //calls bar method that takes and validates bar input
         Button bar = new Button("Bar");
         bar.setOnAction(e -> barIn());
         
+        //calls rod method that takes and validates rod input
         Button rod = new Button("Rod");
         rod.setOnAction(e -> diskrodIn("Rod"));
         
+        //calls disk method that takes and validates disk input
         Button disk = new Button("Disk");
         disk.setOnAction(e -> diskrodIn("Disk"));
         
+        //calls sphere method that takes and validates sphere input
         Button sphere = new Button("Sphere");
         sphere.setOnAction(e -> sphereIn());
         
+        //adds button to layout
         selection.getChildren().addAll(bar, rod, disk, sphere);
         
-        
-        
-        
+        //creates window using layout and scene
         menu = new Scene(selection, 700, 700);
         menu.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(menu);
