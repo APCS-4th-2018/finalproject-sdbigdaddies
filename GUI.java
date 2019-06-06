@@ -1,7 +1,7 @@
 
 /**
  * Write a description of class GUI here.
- *
+ * creates a basic gui that takes user input and creates a simulation object
  * @author (David Glozman)
  * @version (052419)
  */
@@ -15,6 +15,7 @@ import javafx.scene.control.*;
 
 public class GUI extends Application 
 {
+    //instance variables
     Stage window;
     Scene menu;
     VBox layout;
@@ -25,31 +26,40 @@ public class GUI extends Application
     }
     
     @Override
+    /**
+     * Start method creates and displays the window menu scene 
+     * @param main primary stage that sets up the initial scene
+     */
     public void start(Stage primaryStage) throws Exception
     {
+        //creates initial scene with tital torsional pendelum lab
         window = primaryStage;
         window.setTitle("Torsional Pendelum Lab");
         
+        //creates a horizontal layout that is centered
         HBox selection = new HBox(15);
         selection.setAlignment(Pos.CENTER);
         
+        //calls bar method that takes and validates bar input
         Button bar = new Button("Bar");
         bar.setOnAction(e -> barIn());
         
+        //calls rod method that takes and validates rod input
         Button rod = new Button("Rod");
         rod.setOnAction(e -> diskrodIn("Rod"));
         
+        //calls disk method that takes and validates disk input
         Button disk = new Button("Disk");
         disk.setOnAction(e -> diskrodIn("Disk"));
         
+        //calls sphere method that takes and validates sphere input
         Button sphere = new Button("Sphere");
         sphere.setOnAction(e -> sphereIn());
         
+        //adds button to layout
         selection.getChildren().addAll(bar, rod, disk, sphere);
         
-        
-        
-        
+        //creates window using layout and scene
         menu = new Scene(selection, 700, 700);
         menu.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(menu);
@@ -61,11 +71,17 @@ public class GUI extends Application
         
     }
     
+    /*
+     * takes bar input from user and uses the validator object to validate the input
+     */
     private void barIn()
     {    
+        //local variables
         layout  = new VBox(15);
         layout.setPadding(new Insets(20, 20, 20, 20));
+        Validator valid = new Validator();
        
+        //creates the horizonatal rows that have input prompt and textfield
         HBox row1 = new HBox(5);
         HBox row2 = new HBox(5);
         HBox row3 = new HBox(5);
@@ -114,7 +130,7 @@ public class GUI extends Application
         tConstantInput.setPromptText("torsional constant value");
         
         //creates row 4
-        row5.getChildren().addAll(tConstant, tConstantInput);
+        row4.getChildren().addAll(tConstant, tConstantInput);
         
         //Height constant input
         Label height = new Label("Height:");
@@ -139,21 +155,47 @@ public class GUI extends Application
         //simulation button
         Button create = new Button("Enter");
         
+        //go back to main menu
         Button back = new Button("Back");
+        back.setOnAction(e -> {window.setScene(menu); window.show();});
         
+        //creates layout
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, row6, create, back);
         
+        //display scene
         Scene barScene = new Scene(layout, 350, 400);
-        barScene.getStyleSheets().add(getClass().getResourse("FXStyling.css").toExternalForm());
+        barScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(barScene);
         window.show();
+        
+        //either simulates using input data or reprompts user by displaying error pop up with invalid inpuit
+        create.setOnAction(e -> {
+           if(!valid.diskrodCheck(thetaInput, massInput, radiusInput, tConstantInput, heightInput))
+           {
+             //redisplay scene
+             Scene drScene = new Scene(layout, 350, 400);
+             drScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
+             window.setScene(drScene);
+             window.show();
+          }
+          else
+            //move on and simulate pendelum
+             System.out.print("move on?");});
+             
+        
     }
     
+     /*
+     * takes disk or rod input from user and uses the validator object to validate the input
+     */
     private void diskrodIn(String title)
     {
+        //local variables
         layout = new VBox(15);
         layout.setPadding(new Insets(20, 20, 20, 20));
-       
+        Validator valid = new Validator();
+        
+        //creates the horizonatal rows that have input prompt and textfield
         HBox row1 = new HBox(5);
         HBox row2 = new HBox(5);
         HBox row3 = new HBox(5);
@@ -216,29 +258,46 @@ public class GUI extends Application
         
         //simulation button
         Button create = new Button("Enter");
-        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5,row6, create);
         
-       do
-       {
+        //go back to main menu
+        Button back = new Button("Back");
+        back.setOnAction(e -> {window.setScene(menu); window.show();});
+        
+        //creates layout
+        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5,row6, create, back);
+      
+            //display the scene
              Scene diskrodScene = new Scene(layout, 350, 400);
-             diskrodScene.getStyleSheets().add(getClass().getResourse("FXStyling.css").toExternalForm());
+             diskrodScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
              window.setScene(diskrodScene);
              window.show();
-       }
-       while();
-        
-        
-        
-        
-        
+             
+        //either simulates using input data or reprompts user by displaying error pop up with invalid inpuit
+        create.setOnAction(e -> {
+           if(!valid.diskrodCheck(thetaInput, massInput, radiusInput, tConstantInput, heightInput))
+           {
+             Scene drScene = new Scene(layout, 350, 400);
+             drScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
+             window.setScene(drScene);
+             window.show();
+          }
+          else
+             System.out.print("move on?");});
+       
        
     }
     
+      /*
+     * takes sphere input from user and uses the validator object to validate the input
+     */
     private void sphereIn()
     {
+        //local variables
         layout = new VBox(15);
         layout.setPadding(new Insets(20, 20, 20, 20));
+        Validator valid = new Validator();
        
+        //creates the horizonatal rows that have input prompt and textfield
         HBox row1 = new HBox(5);
         HBox row2 = new HBox(5);
         HBox row3 = new HBox(5);
@@ -289,13 +348,32 @@ public class GUI extends Application
         
         //simulation button
         Button create = new Button("Enter");
+        //go back to main menu
+        Button back = new Button("Back");
+        back.setOnAction(e -> {window.setScene(menu); window.show();});
         
+        //creates layout
+        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, create, back);
         
-        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, create);
-        
+        //display the scene
         Scene sphereScene = new Scene(layout, 350, 400);
-        sphereScene.getStyleSheets().add(getClass().getResourse("FXStyling.css").toExternalForm());
+        sphereScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(sphereScene);
         window.show();
+        
+        //either simulates using input data or reprompts user by displaying error pop up with invalid inpuit
+        create.setOnAction(e -> {
+           if(!valid.sphereCheck(thetaInput, massInput, radiusInput, tConstantInput))
+           {
+             Scene drScene = new Scene(layout, 350, 400);
+             drScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
+             window.setScene(drScene);
+             window.show();
+          }
+          else
+            //move and on and simulate pendelum
+            System.out.print("move on?");});
+            
+        
     }
 }
