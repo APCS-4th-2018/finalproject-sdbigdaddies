@@ -393,8 +393,11 @@ public class GUI extends Application
           }
           else
             //move and on and simulate pendelum
-            System.out.print("move on?");});
-            
-        
+           {
+               PhysicalSphere po = new PhysicalSphere(Double.parseDouble(massInput.getText()), Double.parseDouble(radiusInput.getText()));
+               Lab experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
+               Display test = new Display(experiment);
+           }   
+        });
     }
 }
