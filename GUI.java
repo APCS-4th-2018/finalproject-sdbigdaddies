@@ -15,6 +15,7 @@ import javafx.scene.control.*;
 
 public class GUI extends Application 
 {
+    //instance variables
     Stage window;
     Scene menu;
     VBox layout;
