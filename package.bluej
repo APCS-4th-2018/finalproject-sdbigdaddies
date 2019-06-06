@@ -2,11 +2,11 @@
 dependency1.from=Lab
 dependency1.to=PhysicalObject
 dependency1.type=UsesDependency
-dependency2.from=GUI
-dependency2.to=Validator
+dependency2.from=Validator
+dependency2.to=AlertBox
 dependency2.type=UsesDependency
-dependency3.from=Validator
-dependency3.to=AlertBox
+dependency3.from=GUI
+dependency3.to=Validator
 dependency3.type=UsesDependency
 editor.fx.0.height=722
 editor.fx.0.width=1302

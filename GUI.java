@@ -115,7 +115,7 @@ public class GUI extends Application
         tConstantInput.setPromptText("torsional constant value");
         
         //creates row 4
-        row5.getChildren().addAll(tConstant, tConstantInput);
+        row4.getChildren().addAll(tConstant, tConstantInput);
         
         //Height constant input
         Label height = new Label("Height:");
@@ -229,7 +229,9 @@ public class GUI extends Application
         
         //simulation button
         Button create = new Button("Enter");
-        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5,row6, create);
+        Button back = new Button("Back");
+        
+        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5,row6, create, back);
       
              Scene diskrodScene = new Scene(layout, 350, 400);
              diskrodScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
@@ -306,9 +308,9 @@ public class GUI extends Application
         
         //simulation button
         Button create = new Button("Enter");
+        Button back = new Button("Back");
         
-        
-        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, create);
+        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, create, back);
         
         Scene sphereScene = new Scene(layout, 350, 400);
         sphereScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
