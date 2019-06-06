@@ -43,39 +43,56 @@ public class Lab
         freq = calcFreq();
         period = calcPeriod();
     }
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public double calcAngFreq()
+    private double calcAngFreq()
     {
      return Math.sqrt(tor/p.getInertia()); 
     }
-    public double calcFreq()
+    private double calcFreq()
     {
       return 1/freq;
     }
-    public double calctheta(double time)
+    private double calctheta(double time)
     {
      return initTheta*Math.cos(angFreq*time);
     }
-    public double calcPeriod()
+    private double calcPeriod()
     {
      return Math.PI*2* Math.sqrt(p.getInertia()/tor);
     }
+    /**
+     *Getter for the frequency of oscillation
+     *
+     * @return    the frequency of oscillation
+     */
     public double getFreq()
     {
         return freq;
     }
+    /**
+     * Getter for the angle of displacement
+     *
+     * @return    the current angle the object is from equilibrium
+     */
     public double getTheta()
     {
         return initTheta;
     }
+    /**
+     * getter for the angular frequency
+     *
+     * @return    the angular frequency of an object
+     */
     public double getAngFreq()
     {
         return angFreq;
     }
-    
+    /**
+     * A getter for the object spinning
+     * 
+     * @return    the object's reference
+     */
+    public PhysicalObject getObj()
+    {
+     return p;
+    }
 }
