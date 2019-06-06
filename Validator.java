@@ -18,6 +18,7 @@ public class Validator
 {
     /*
      * checks if the textfield is a valid integer that is postiive, non null.
+     * @param textfield of an input to be checked
      */
     private boolean isInt(TextField input)
     {
@@ -46,6 +47,12 @@ public class Validator
         return isNum; //return  boolean
     }
     
+    /**
+     * checks if there are any errors in the disk or rod's input and returns a boolean based on result. 
+     * calls an error box if there are errors
+     * @param TextField objects (input) of theta, mass,radius, torsional constant, height
+     * @return boolean true if that arent any errors and false if there are
+     */
     public boolean diskrodCheck(TextField theta, TextField mass, TextField radius, TextField tc, TextField height)
     {
         //local variables
@@ -97,6 +104,12 @@ public class Validator
         return check; //return boolean
     }
     
+    /**
+     * checks if there are any errors in sphere input and returns a boolean based on result.
+     * calls an error box if there are errors
+     * @param TextField objects (input) of theta, mass,radius, torsional constant
+     * @return boolean true if that arent any errors and false if there are
+     */
     public boolean sphereCheck(TextField theta, TextField mass, TextField radius, TextField tc)
     {
         //local variables
@@ -141,7 +154,12 @@ public class Validator
         return check; //return boolean
     }
     
-    
+    /**
+     * checks if there are any errors in the bars input 
+     * and returns a boolean based on result. calls an error box if there are errors
+     * @param TextField objects (input) of theta, mass, radius, torsional constant, height, width
+     * @return boolean true if that arent any errors and false if there are
+     */
     public boolean barCheck(TextField theta, TextField mass, TextField radius, TextField tc, TextField height, TextField width)
     {
         //local variables
