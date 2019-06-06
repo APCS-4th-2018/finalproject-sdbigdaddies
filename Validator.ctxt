@@ -2,6 +2,7 @@
 comment0.target=Validator
 comment1.params=input
 comment1.target=boolean\ isInt(javafx.scene.control.TextField)
+comment1.text=\n\ checks\ if\ the\ textfield\ is\ a\ valid\ integer\ that\ is\ postiive,\ non\ null.\n
 comment2.params=theta\ mass\ radius\ tc\ height
 comment2.target=boolean\ diskrodCheck(javafx.scene.control.TextField,\ javafx.scene.control.TextField,\ javafx.scene.control.TextField,\ javafx.scene.control.TextField,\ javafx.scene.control.TextField)
 comment3.params=theta\ mass\ radius\ tc

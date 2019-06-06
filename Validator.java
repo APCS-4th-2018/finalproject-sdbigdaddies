@@ -96,89 +96,106 @@ public class Validator
     
     public boolean sphereCheck(TextField theta, TextField mass, TextField radius, TextField tc)
     {
+        //local variables
         boolean check = true; 
         VBox error = new VBox(8);
         
+        //if theta isnt valid
         if(!isInt(theta))
         {
             check = false;
             error.getChildren().add(new Label("Invalid Theta: Theta must be positive and a numerical value"));
         }
         
+        //if mass isnt valid
         if(!isInt(mass))
         {
             check = false;
             error.getChildren().add(new Label("Invalid Mass: Mass must be positive and a numerical value"));
         }
         
+        //if radius isnt valid
         if(!isInt(radius))
         {
             check = false;
             error.getChildren().add(new Label("Invalid Radius: Radius must be positive and a numerical value"));
         }
+        
+        //if torsional constant isnt valid
         if(!isInt(tc))
         {
             check = false;
             error.getChildren().add(new Label("Invalid Torsional Constant: Constant must be positive and a numerical value"));
         }
         
+        //if anything is invalid display error alert box with invalid input
         if(check == false)
         {
             AlertBox a = new AlertBox();
             a.display(error);
         }
             
-        return check;
+        return check; //return boolean
     }
+    
     
     public boolean barCheck(TextField theta, TextField mass, TextField radius, TextField tc, TextField height, TextField width)
     {
+        //local variables
         boolean check = true; 
-        VBox error = new VBox(8);
+        VBox error = new VBox(10);
+        error.setPadding(new Insets(10,10,10,10));
         
+        //if theta is invalid
         if(!isInt(theta))
         {
             check = false;
             error.getChildren().add(new Label("Invalid Theta: Theta must be positive and a numerical value"));
         }
         
+        //if mass is invald
         if(!isInt(mass))
         {
             check = false;
             error.getChildren().add(new Label("Invalid Mass: Mass must be positive and a numerical value"));
         }
         
+        //if radius is invalid
         if(!isInt(radius))
         {
             check = false;
             error.getChildren().add(new Label("Invalid Radius: Radius must be positive and a numerical value"));
         }
         
+        //if torsional csontatn is invalid
         if(!isInt(tc))
         {
             check = false;
             error.getChildren().add(new Label("Invalid Torsional Constant: Constant must be positive and a numerical value"));
         }
         
+        //if height is invalid
         if(!isInt(height))
         {
             check = false;
             error.getChildren().add(new Label("Invalid Height: Height must be positive and a numerical value"));
         }
         
+        //if width is invalid
         if(!isInt(width))
         {
             check = false;
             error.getChildren().add(new Label("Invalid Width: Width must be positive and a numerical value"));
         }
         
+        //if anything is invalid display error alert box
         if(check == false)
         {
             AlertBox a = new AlertBox();
             a.display(error);
         }
             
-        return check;
+        return check; //return boolean
     }
     
     
