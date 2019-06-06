@@ -144,7 +144,7 @@ public class GUI extends Application
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, row6, create, back);
         
         Scene barScene = new Scene(layout, 350, 400);
-        barScene.getStyleSheets().add(getClass().getResourse("FXStyling.css").toExternalForm());
+        barScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(barScene);
         window.show();
     }
@@ -153,7 +153,8 @@ public class GUI extends Application
     {
         layout = new VBox(15);
         layout.setPadding(new Insets(20, 20, 20, 20));
-       
+        Validator valid = new Validator();
+        
         HBox row1 = new HBox(5);
         HBox row2 = new HBox(5);
         HBox row3 = new HBox(5);
@@ -217,20 +218,23 @@ public class GUI extends Application
         //simulation button
         Button create = new Button("Enter");
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5,row6, create);
-        
-       do
-       {
+      
              Scene diskrodScene = new Scene(layout, 350, 400);
-             diskrodScene.getStyleSheets().add(getClass().getResourse("FXStyling.css").toExternalForm());
+             diskrodScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
              window.setScene(diskrodScene);
              window.show();
-       }
-       while();
-        
-        
-        
-        
-        
+             
+       create.setOnAction(e -> {
+           if(!valid.diskrodCheck(thetaInput, massInput, radiusInput, tConstantInput, heightInput))
+           {
+             Scene drScene = new Scene(layout, 350, 400);
+             drScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
+             window.setScene(drScene);
+             window.show();
+          }
+          else
+            System.out.print("move on?");});
+       
        
     }
     
@@ -294,7 +298,7 @@ public class GUI extends Application
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, create);
         
         Scene sphereScene = new Scene(layout, 350, 400);
-        sphereScene.getStyleSheets().add(getClass().getResourse("FXStyling.css").toExternalForm());
+        sphereScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(sphereScene);
         window.show();
     }

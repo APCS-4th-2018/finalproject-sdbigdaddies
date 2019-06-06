@@ -18,9 +18,10 @@ public class Validator
         boolean isNum = true;
         String text = null;
         
-        if(!input.getText().matches("[0-9]+") || input.getText().equals("") || input.getText().equals(null))
+        if(!input.getText().matches("[0-9]+") || input.getText().equals(null))
         {
             isNum = false;
+            
         }
         else 
         {
@@ -29,8 +30,9 @@ public class Validator
                 double num = Double.parseDouble(input.getText());
                 if(num < 0)
                     isNum = false;
+                
             }
-            catch (NumberFormatException e) {isNum = false;}
+            catch (NumberFormatException e) {isNum = false; System.out.print("exception");}
         }
         return isNum;
     }
@@ -45,11 +47,13 @@ public class Validator
             check = false;
             error.getChildren().add(new Label("Invalid Theta: Theta must be positive and a numerical value"));
         }
+        
         if(!isInt(mass))
         {
             check = false;
             error.getChildren().add(new Label("Invalid Mass: Mass must be positive and a numerical value"));
         }
+        
         if(!isInt(radius))
         {
             check = false;

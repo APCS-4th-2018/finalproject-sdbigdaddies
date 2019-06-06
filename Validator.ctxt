@@ -2,4 +2,6 @@
 comment0.target=Validator
 comment1.params=input
 comment1.target=boolean\ isInt(javafx.scene.control.TextField)
-numComments=2
+comment2.params=theta\ mass\ radius\ tc\ height
+comment2.target=boolean\ diskrodCheck(javafx.scene.control.TextField,\ javafx.scene.control.TextField,\ javafx.scene.control.TextField,\ javafx.scene.control.TextField,\ javafx.scene.control.TextField)
+numComments=3
