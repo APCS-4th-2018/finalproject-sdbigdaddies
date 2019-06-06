@@ -170,7 +170,7 @@ public class GUI extends Application
         
         //either simulates using input data or reprompts user by displaying error pop up with invalid inpuit
         create.setOnAction(e -> {
-           if(!valid.diskrodCheck(thetaInput, massInput, radiusInput, tConstantInput, heightInput))
+           if(!valid.barCheck(thetaInput, massInput, radiusInput, tConstantInput, heightInput, widthInput))
            {
              //redisplay scene
              Scene drScene = new Scene(layout, 350, 400);
@@ -179,12 +179,16 @@ public class GUI extends Application
              window.show();
           }
           else
+          {
             //move on and simulate pendelum
-             System.out.print("move on?");});
-             
-        
+            PhysicalBar po = new PhysicalBar(Double.parseDouble(massInput.getText()), Double.parseDouble(radiusInput.getText()),
+                 Double.parseDouble(heightInput.getText()), Double.parseDouble(widthInput.getText()));
+            Lab experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
+            Display test = new Display(experiment);
+            
+          }
+        });
     }
-    
      /*
      * takes disk or rod input from user and uses the validator object to validate the input
      */
@@ -282,9 +286,26 @@ public class GUI extends Application
              window.show();
           }
           else
-             System.out.print("move on?");});
+          {
+            String s = "Physical" + title;
+            PhysicalObject po;
+            if(s.equals("PhysicalRod"))
+            {
+                po = new PhysicalRod(Double.parseDouble(massInput.getText()), Double.parseDouble(radiusInput.getText()),
+                 Double.parseDouble(heightInput.getText()));
+            }
+            else
+                if(s.equals("PhysicalDisk"))
+                {
+                    po = new PhysicalDisk(Double.parseDouble(massInput.getText()), Double.parseDouble(radiusInput.getText()),
+                        Double.parseDouble(heightInput.getText()));
+                }
+                    
+            Lab experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
+            Display test = new Display(experiment);
+          }
        
-       
+        });
     }
     
       /*

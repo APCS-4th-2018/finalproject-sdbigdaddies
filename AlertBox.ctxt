@@ -2,4 +2,5 @@
 comment0.target=AlertBox
 comment1.params=layout
 comment1.target=void\ display(javafx.scene.layout.VBox)
+comment1.text=\n\ displays\ the\ passed\ layout\ as\ a\ window\ and\ displays\ which\ inputs\ are\ invalid\n\ @param\ layout\ object\ with\ labels\ that\ represent\ invalid\ input\n
 numComments=2
