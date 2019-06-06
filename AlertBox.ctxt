@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=AlertBox
+comment1.params=layout
+comment1.target=void\ display(javafx.scene.layout.VBox)
+comment1.text=\r\n\ displays\ the\ passed\ layout\ as\ a\ window\ and\ displays\ which\ inputs\ are\ invalid\r\n\ @param\ layout\ object\ with\ labels\ that\ represent\ invalid\ input\r\n
+numComments=2
