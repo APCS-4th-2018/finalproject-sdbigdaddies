@@ -43,18 +43,22 @@ public class GUI extends Application
         //calls bar method that takes and validates bar input
         Button bar = new Button("Bar");
         bar.setOnAction(e -> barIn());
+        bar.setId("bar");
         
         //calls rod method that takes and validates rod input
         Button rod = new Button("Rod");
         rod.setOnAction(e -> diskrodIn("Rod"));
+        bar.setId("rod");
         
         //calls disk method that takes and validates disk input
         Button disk = new Button("Disk");
         disk.setOnAction(e -> diskrodIn("Disk"));
+        disk.setId("disk");
         
         //calls sphere method that takes and validates sphere input
         Button sphere = new Button("Sphere");
         sphere.setOnAction(e -> sphereIn());
+        sphere.setId("sphere");
         
         //adds button to layout
         selection.getChildren().addAll(bar, rod, disk, sphere);
@@ -91,72 +95,87 @@ public class GUI extends Application
         
         //title at the top
         Label nameLabel = new Label("Bar");
+        nameLabel.setId("nameLabel");
        
         //Theta Label
         Label initT = new Label("Initial Theta:");
+        initT.setId("initT");
        
         //Theta Input
         TextField thetaInput = new TextField();
         thetaInput.setPromptText("intial theta value");
+        
         
         //creates row one
         row1.getChildren().addAll(initT, thetaInput);
         
         //Mass Label
         Label mass = new Label("Mass:");
+        mass.setId("mass");
        
         //Mass Input
         TextField massInput = new TextField();
         massInput.setPromptText("mass value");
+        massInput.setId("massInput");
         
         //creates row 2
         row2.getChildren().addAll(mass, massInput);
         
         //Radius Label
         Label radius = new Label("Radius:");
+        radius.setId("radius");
         
         //Radius Input
         TextField radiusInput = new TextField();
         radiusInput.setPromptText("radius value");
+        radiusInput.setId("radiusInput");
         
         //creates row 3
         row3.getChildren().addAll(radius, radiusInput);
         
         //Torsional Constant 
         Label tConstant = new Label("Torsional Constant:");
+        tConstant.setId("tConstant");
         
         //Torsional Constant input
-        TextField tConstantInput = new TextField();
+        TextField tConstantInput = new TextField("1");
         tConstantInput.setPromptText("torsional constant value");
+        tConstantInput.setId("tConstantInput");
         
         //creates row 4
         row4.getChildren().addAll(tConstant, tConstantInput);
         
         //Height constant input
         Label height = new Label("Height:");
-         
+        height.setId("height");
+        
         //Height input
         TextField heightInput = new TextField();
         heightInput.setPromptText("height value");
+        heightInput.setId("heightInput");
         
         //creates row 5
         row5.getChildren().addAll(height, heightInput);
         
         //Width constant input
         Label width = new Label("Width:");
+        width.setId("width");
          
         //Width input
         TextField widthInput = new TextField();
         widthInput.setPromptText("width value");
+        widthInput.setId("widthInput");
         
         //creates row 6
         row6.getChildren().addAll(width, widthInput);
         
         //simulation button
         Button create = new Button("Enter");
+        create.setId("create");
         
         //go back to main menu
         Button back = new Button("Back");
+        back.setId("back");
         back.setOnAction(e -> {window.setScene(menu); window.show();});
         
         //creates layout
@@ -170,7 +189,7 @@ public class GUI extends Application
         
         //either simulates using input data or reprompts user by displaying error pop up with invalid inpuit
         create.setOnAction(e -> {
-           if(!valid.diskrodCheck(thetaInput, massInput, radiusInput, tConstantInput, heightInput))
+           if(!valid.barCheck(thetaInput, massInput, radiusInput, tConstantInput, heightInput, widthInput))
            {
              //redisplay scene
              Scene drScene = new Scene(layout, 350, 400);
@@ -179,10 +198,15 @@ public class GUI extends Application
              window.show();
           }
           else
+          {
             //move on and simulate pendelum
-             System.out.print("move on?");});
-             
-        
+            PhysicalBar po = new PhysicalBar(Double.parseDouble(massInput.getText()), Double.parseDouble(radiusInput.getText()),
+                 Double.parseDouble(heightInput.getText()), Double.parseDouble(widthInput.getText()));
+            Lab experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
+            //Display test = new Display(experiment);
+            
+          }
+        });
     }
     
      /*
@@ -205,62 +229,75 @@ public class GUI extends Application
         
         //title at the top
         Label nameLabel = new Label(title);
+        nameLabel.setId("nameLabel");
        
         //Theta Label
         Label initT = new Label("Initial Theta:");
+        initT.setId("initT");
        
         //Theta Input
         TextField thetaInput = new TextField();
         thetaInput.setPromptText("intial theta value");
+        thetaInput.setId("thetaInput");
         
         //creates row one
         row1.getChildren().addAll(initT, thetaInput);
         
         //Mass Label
         Label mass = new Label("Mass:");
+        mass.setId("mass");
        
         //Mass Input
         TextField massInput = new TextField();
         massInput.setPromptText("mass value");
+        massInput.setId("massInput");
         
         //creates row 2
         row2.getChildren().addAll(mass, massInput);
         
         //Radius Label
         Label radius = new Label("Radius:");
+        radius.setId("radius");
         
         //Radius Input
         TextField radiusInput = new TextField();
         radiusInput.setPromptText("radius value");
+        radiusInput.setId("radiusInput");
         
         //creates row 3
         row3.getChildren().addAll(radius, radiusInput);
         
         //Torsional Constant 
         Label tConstant = new Label("Torsional Constant:");
+        tConstant.setId("tConstant");
         
         //Torsional Constant input
-        TextField tConstantInput = new TextField();
+        TextField tConstantInput = new TextField("1");
         tConstantInput.setPromptText("torsional constant value");
+        tConstantInput.setId("tConstantInput");
         
         //creates row 4
         row5.getChildren().addAll(tConstant, tConstantInput);
         
         //Height constant input
         Label height = new Label("Height:");
+        height.setId("height");
          
         //Height input
         TextField heightInput = new TextField();
         heightInput.setPromptText("height value");
+        heightInput.setId("heightInput");
         
         //creates row 5
         row6.getChildren().addAll(height, heightInput);
         
         //simulation button
         Button create = new Button("Enter");
+        create.setId("create");
         
         //go back to main menu
         Button back = new Button("Back");
+        back.setId("back");
         back.setOnAction(e -> {window.setScene(menu); window.show();});
         
         //creates layout
@@ -282,9 +319,27 @@ public class GUI extends Application
              window.show();
           }
           else
-             System.out.print("move on?");});
+          {
+            String s = "Physical" + title; //create title
+            PhysicalObject po = null;
+            if(s.equals("PhysicalRod")) //if its a physical rod
+            {
+                po = new PhysicalRod(Double.parseDouble(massInput.getText()), Double.parseDouble(radiusInput.getText()),
+                 Double.parseDouble(heightInput.getText()));
+            }
+            else
+                if(s.equals("PhysicalDisk")) //if its a physical disk
+                {
+                    po = new PhysicalDisk(Double.parseDouble(massInput.getText()), Double.parseDouble(radiusInput.getText()),
+                        Double.parseDouble(heightInput.getText()));
+                    Lab experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
+                }
+                    
+            
+            //Display test = new Display(experiment);
+          }
        
-       
+        });
     }
     
       /*
@@ -305,42 +360,50 @@ public class GUI extends Application
         
         //title at the top
         Label nameLabel = new Label("Sphere");
+        nameLabel.setId("nameLabel");
        
         //Theta Label
         Label initT = new Label("Initial Theta:");
+        initT.setId("initT");
        
         //Theta Input
         TextField thetaInput = new TextField();
         thetaInput.setPromptText("intial theta value");
+        thetaInput.setId("thetaInput");
         
         //creates row one
         row1.getChildren().addAll(initT, thetaInput);
         
         //Mass Label
         Label mass = new Label("Mass:");
+        mass.setId("mass");
        
         //Mass Input
         TextField massInput = new TextField();
         massInput.setPromptText("mass value");
+        massInput.setId("massInput");
         
         //creates row 2
         row2.getChildren().addAll(mass, massInput);
         
         //Radius Label
         Label radius = new Label("Radius:");
+        radius.setId("radius");
         
         //Radius Input
         TextField radiusInput = new TextField();
         radiusInput.setPromptText("radius value");
+        radiusInput.setId("radiusInput");
         
         //creates row 3
         row3.getChildren().addAll(radius, radiusInput);
         
         //Torsional Constant 
         Label tConstant = new Label("Torsional Constant:");
+        tConstant.setId("tConstant");
         
         //Torsional Constant input
-        TextField tConstantInput = new TextField();
+        TextField tConstantInput = new TextField("1");
         tConstantInput.setPromptText("torsional constant value");
         
         //creates row 4
@@ -348,8 +411,11 @@ public class GUI extends Application
         
         //simulation button
         Button create = new Button("Enter");
+        create.setId("create");
+        
         //go back to main menu
         Button back = new Button("Back");
+        back.setId("back");
         back.setOnAction(e -> {window.setScene(menu); window.show();});
         
         //creates layout
@@ -365,6 +431,7 @@ public class GUI extends Application
         create.setOnAction(e -> {
            if(!valid.sphereCheck(thetaInput, massInput, radiusInput, tConstantInput))
            {
+               //redisplay scene
              Scene drScene = new Scene(layout, 350, 400);
              drScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
              window.setScene(drScene);
@@ -372,8 +439,12 @@ public class GUI extends Application
           }
           else
             //move and on and simulate pendelum
-            System.out.print("move on?");});
-            
-        
+           {
+               //create test objects
+               PhysicalSphere po = new PhysicalSphere(Double.parseDouble(massInput.getText()), Double.parseDouble(radiusInput.getText()));
+               Lab experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
+               //Display test = new Display(experiment);
+           }   
+        });
     }
 }

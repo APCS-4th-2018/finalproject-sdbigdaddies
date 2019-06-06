@@ -2,11 +2,14 @@
 comment0.target=Validator
 comment1.params=input
 comment1.target=boolean\ isInt(javafx.scene.control.TextField)
-comment1.text=\n\ checks\ if\ the\ textfield\ is\ a\ valid\ integer\ that\ is\ postiive,\ non\ null.\n
+comment1.text=\n\ checks\ if\ the\ textfield\ is\ a\ valid\ integer\ that\ is\ postiive,\ non\ null.\n\ @param\ textfield\ of\ an\ input\ to\ be\ checked\n
 comment2.params=theta\ mass\ radius\ tc\ height
 comment2.target=boolean\ diskrodCheck(javafx.scene.control.TextField,\ javafx.scene.control.TextField,\ javafx.scene.control.TextField,\ javafx.scene.control.TextField,\ javafx.scene.control.TextField)
+comment2.text=\n\ checks\ if\ there\ are\ any\ errors\ in\ the\ disk\ or\ rod's\ input\ and\ returns\ a\ boolean\ based\ on\ result.\ \n\ calls\ an\ error\ box\ if\ there\ are\ errors\n\ @param\ TextField\ objects\ (input)\ of\ theta,\ mass,radius,\ torsional\ constant,\ height\n\ @return\ boolean\ true\ if\ that\ arent\ any\ errors\ and\ false\ if\ there\ are\n
 comment3.params=theta\ mass\ radius\ tc
 comment3.target=boolean\ sphereCheck(javafx.scene.control.TextField,\ javafx.scene.control.TextField,\ javafx.scene.control.TextField,\ javafx.scene.control.TextField)
+comment3.text=\n\ checks\ if\ there\ are\ any\ errors\ in\ sphere\ input\ and\ returns\ a\ boolean\ based\ on\ result.\n\ calls\ an\ error\ box\ if\ there\ are\ errors\n\ @param\ TextField\ objects\ (input)\ of\ theta,\ mass,radius,\ torsional\ constant\n\ @return\ boolean\ true\ if\ that\ arent\ any\ errors\ and\ false\ if\ there\ are\n
 comment4.params=theta\ mass\ radius\ tc\ height\ width
 comment4.target=boolean\ barCheck(javafx.scene.control.TextField,\ javafx.scene.control.TextField,\ javafx.scene.control.TextField,\ javafx.scene.control.TextField,\ javafx.scene.control.TextField,\ javafx.scene.control.TextField)
+comment4.text=\n\ checks\ if\ there\ are\ any\ errors\ in\ the\ bars\ input\ \n\ and\ returns\ a\ boolean\ based\ on\ result.\ calls\ an\ error\ box\ if\ there\ are\ errors\n\ @param\ TextField\ objects\ (input)\ of\ theta,\ mass,\ radius,\ torsional\ constant,\ height,\ width\n\ @return\ boolean\ true\ if\ that\ arent\ any\ errors\ and\ false\ if\ there\ are\n
 numComments=5
