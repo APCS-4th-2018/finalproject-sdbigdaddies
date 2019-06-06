@@ -118,7 +118,7 @@ public class Validator
     
     public boolean barCheck(TextField theta, TextField mass, TextField radius, TextField tc, TextField height, TextField width)
     {
-       boolean check = true; 
+        boolean check = true; 
         VBox error = new VBox(8);
         
         if(!isInt(theta))
@@ -145,11 +145,12 @@ public class Validator
             error.getChildren().add(new Label("Invalid Torsional Constant: Constant must be positive and a numerical value"));
         }
         
-        if(!isInt(tc))
+        if(!isInt(height))
         {
             check = false;
-            error.getChildren().add(new Label("Invalid Torsional Constant: Constant must be positive and a numerical value"));
+            error.getChildren().add(new Label("Invalid Height: Height must be positive and a numerical value"));
         }
+        
         if(check == false)
         {
             AlertBox a = new AlertBox();
