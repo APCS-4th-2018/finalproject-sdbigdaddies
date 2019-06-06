@@ -158,7 +158,9 @@ public class GUI extends Application
              window.show();
           }
           else
-            System.out.print("move on?");});
+             System.out.print("move on?");});
+             
+        back.setOnAction(e -> {window.setScene(menu); window.show();});
     }
     
     private void diskrodIn(String title)
@@ -247,7 +249,7 @@ public class GUI extends Application
              window.show();
           }
           else
-            System.out.print("move on?");});
+             System.out.print("move on?");});
        
        
     }
