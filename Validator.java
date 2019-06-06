@@ -32,7 +32,7 @@ public class Validator
                     isNum = false;
                 
             }
-            catch (NumberFormatException e) {isNum = false; System.out.print("exception");}
+            catch (NumberFormatException e) {isNum = false;}
         }
         return isNum;
     }
@@ -115,6 +115,8 @@ public class Validator
             
         return check;
     }
+    
+    public boolean barCheck(TextField theta, TextField mass, TextField radius, TextField tc, TextField height, TextField width)
     
     
     
