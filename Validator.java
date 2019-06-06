@@ -79,8 +79,47 @@ public class Validator
         return check;
     }
     
-    
-    
+    public boolean sphereCheck(TextField theta, TextField mass, TextField radius, TextField tc)
+    {
+        boolean check = true; 
+        VBox error = new VBox(8);
+        
+        if(!isInt(theta))
+        {
+            check = false;
+            error.getChildren().add(new Label("Invalid Theta: Theta must be positive and a numerical value"));
+        }
+        
+        if(!isInt(mass))
+        {
+            check = false;
+            error.getChildren().add(new Label("Invalid Mass: Mass must be positive and a numerical value"));
+        }
+        
+        if(!isInt(radius))
+        {
+            check = false;
+            error.getChildren().add(new Label("Invalid Radius: Radius must be positive and a numerical value"));
+        }
+        if(!isInt(tc))
+        {
+            check = false;
+            error.getChildren().add(new Label("Invalid Torsional Constant: Constant must be positive and a numerical value"));
+        }
+        if(!isInt(height))
+        {
+            check = false;
+            error.getChildren().add(new Label("Invalid Height: Height must be positive and a numerical value"));
+        }
+        
+        if(check == false)
+        {
+            AlertBox a = new AlertBox();
+            a.display(error);
+        }
+            
+        return check;
+    }
     
     
     

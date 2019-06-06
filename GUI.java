@@ -242,6 +242,7 @@ public class GUI extends Application
     {
         layout = new VBox(15);
         layout.setPadding(new Insets(20, 20, 20, 20));
+       Validator valid = new Validator();
        
         HBox row1 = new HBox(5);
         HBox row2 = new HBox(5);
@@ -301,5 +302,16 @@ public class GUI extends Application
         sphereScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(sphereScene);
         window.show();
+        
+        create.setOnAction(e -> {
+           if(!valid.sphereCheck(thetaInput, massInput, radiusInput, tConstantInput))
+           {
+             Scene drScene = new Scene(layout, 350, 400);
+             drScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
+             window.setScene(drScene);
+             window.show();
+          }
+          else
+            System.out.print("move on?");});
     }
 }
