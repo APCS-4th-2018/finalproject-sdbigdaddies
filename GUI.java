@@ -70,12 +70,17 @@ public class GUI extends Application
         
     }
     
+    /*
+     * takes bar input from user and uses the validator object to validate the input
+     */
     private void barIn()
     {    
+        //local variables
         layout  = new VBox(15);
         layout.setPadding(new Insets(20, 20, 20, 20));
         Validator valid = new Validator();
        
+        //creates the horizonatal rows that have input prompt and textfield
         HBox row1 = new HBox(5);
         HBox row2 = new HBox(5);
         HBox row3 = new HBox(5);
@@ -149,35 +154,47 @@ public class GUI extends Application
         //simulation button
         Button create = new Button("Enter");
         
+        //go back to main menu
         Button back = new Button("Back");
+        back.setOnAction(e -> {window.setScene(menu); window.show();});
         
+        //creates layout
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, row6, create, back);
         
+        //display scene
         Scene barScene = new Scene(layout, 350, 400);
         barScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(barScene);
         window.show();
         
+        //either simulates using input data or reprompts user by displaying error pop up with invalid inpuit
         create.setOnAction(e -> {
            if(!valid.diskrodCheck(thetaInput, massInput, radiusInput, tConstantInput, heightInput))
            {
+             //redisplay scene
              Scene drScene = new Scene(layout, 350, 400);
              drScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
              window.setScene(drScene);
              window.show();
           }
           else
+            //move on and simulate pendelum
              System.out.print("move on?");});
              
-        back.setOnAction(e -> {window.setScene(menu); window.show();});
+        
     }
     
+     /*
+     * takes disk or rod input from user and uses the validator object to validate the input
+     */
     private void diskrodIn(String title)
     {
+        //local variables
         layout = new VBox(15);
         layout.setPadding(new Insets(20, 20, 20, 20));
         Validator valid = new Validator();
         
+        //creates the horizonatal rows that have input prompt and textfield
         HBox row1 = new HBox(5);
         HBox row2 = new HBox(5);
         HBox row3 = new HBox(5);
@@ -240,15 +257,21 @@ public class GUI extends Application
         
         //simulation button
         Button create = new Button("Enter");
-        Button back = new Button("Back");
         
+        //go back to main menu
+        Button back = new Button("Back");
+        back.setOnAction(e -> {window.setScene(menu); window.show();});
+        
+        //creates layout
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5,row6, create, back);
       
+            //display the scene
              Scene diskrodScene = new Scene(layout, 350, 400);
              diskrodScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
              window.setScene(diskrodScene);
              window.show();
              
+        //either simulates using input data or reprompts user by displaying error pop up with invalid inpuit
         create.setOnAction(e -> {
            if(!valid.diskrodCheck(thetaInput, massInput, radiusInput, tConstantInput, heightInput))
            {
@@ -260,15 +283,20 @@ public class GUI extends Application
           else
              System.out.print("move on?");});
        
-        back.setOnAction(e -> {window.setScene(menu); window.show();});
+       
     }
     
+      /*
+     * takes sphere input from user and uses the validator object to validate the input
+     */
     private void sphereIn()
     {
+        //local variables
         layout = new VBox(15);
         layout.setPadding(new Insets(20, 20, 20, 20));
         Validator valid = new Validator();
        
+        //creates the horizonatal rows that have input prompt and textfield
         HBox row1 = new HBox(5);
         HBox row2 = new HBox(5);
         HBox row3 = new HBox(5);
@@ -319,15 +347,20 @@ public class GUI extends Application
         
         //simulation button
         Button create = new Button("Enter");
+        //go back to main menu
         Button back = new Button("Back");
+        back.setOnAction(e -> {window.setScene(menu); window.show();});
         
+        //creates layout
         layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, create, back);
         
+        //display the scene
         Scene sphereScene = new Scene(layout, 350, 400);
         sphereScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(sphereScene);
         window.show();
         
+        //either simulates using input data or reprompts user by displaying error pop up with invalid inpuit
         create.setOnAction(e -> {
            if(!valid.sphereCheck(thetaInput, massInput, radiusInput, tConstantInput))
            {
@@ -337,8 +370,9 @@ public class GUI extends Application
              window.show();
           }
           else
+            //move and on and simulate pendelum
             System.out.print("move on?");});
             
-        back.setOnAction(e -> {window.setScene(menu); window.show();});
+        
     }
 }
