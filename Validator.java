@@ -106,11 +106,6 @@ public class Validator
             check = false;
             error.getChildren().add(new Label("Invalid Torsional Constant: Constant must be positive and a numerical value"));
         }
-        if(!isInt(height))
-        {
-            check = false;
-            error.getChildren().add(new Label("Invalid Height: Height must be positive and a numerical value"));
-        }
         
         if(check == false)
         {
