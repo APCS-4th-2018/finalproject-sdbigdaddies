@@ -10,6 +10,9 @@ import javafx.scene.control.TextField;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javafx.scene.layout.*;
+import javafx.geometry.*;
+import javafx.stage.*;
+import javafx.application.*;
 
 public class Validator
 {
