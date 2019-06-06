@@ -25,6 +25,10 @@ public class GUI extends Application
     }
     
     @Override
+    /**
+     * Start method creates and displays the window menu scene 
+     * @param main primary stage that sets up the initial scene
+     */
     public void start(Stage primaryStage) throws Exception
     {
         window = primaryStage;
@@ -240,7 +244,7 @@ public class GUI extends Application
              window.setScene(diskrodScene);
              window.show();
              
-       create.setOnAction(e -> {
+        create.setOnAction(e -> {
            if(!valid.diskrodCheck(thetaInput, massInput, radiusInput, tConstantInput, heightInput))
            {
              Scene drScene = new Scene(layout, 350, 400);
@@ -251,7 +255,7 @@ public class GUI extends Application
           else
              System.out.print("move on?");});
        
-       
+        back.setOnAction(e -> {window.setScene(menu); window.show();});
     }
     
     private void sphereIn()
@@ -329,5 +333,7 @@ public class GUI extends Application
           }
           else
             System.out.print("move on?");});
+            
+        back.setOnAction(e -> {window.setScene(menu); window.show();});
     }
 }
