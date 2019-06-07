@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class GUI here.
  * creates a basic gui that takes user input and creates a simulation object
@@ -39,6 +38,7 @@ public class GUI extends Application
         //creates a horizontal layout that is centered
         HBox selection = new HBox(15);
         selection.setAlignment(Pos.CENTER);
+        selection.setId("selection");
         
         //calls bar method that takes and validates bar input
         Button bar = new Button("Bar");
