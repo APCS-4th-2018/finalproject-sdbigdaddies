@@ -3,6 +3,7 @@ import javafx.scene.*;
 import javafx.scene.layout.*;
 import javafx.scene.control.*;
 import javafx.geometry.*;
+import apcslib.*;
 
 /**
  * Acts as a control mechanism while the object is rotating
@@ -29,6 +30,10 @@ public class ControlBox
         window.setMinWidth(300);
         window.setMinHeight(200);
         
+        Label l2 = new Label("Angular Frequency: " + Format.right(d.getLab().getAngFreq(), 6, 3) + " Radians per Second");
+        Label l3 = new Label("Period: " + Format.right(d.getLab().getPeriod(), 6, 3) + " Seconds");
+        Label l4 = new Label("Initial Theta: " + Format.right(d.getLab().getTheta(), 6, 3) + " Radians");
+        
         //Create button to exit display
         Button closeButton = new Button("Back");
         closeButton.setOnAction(event ->
@@ -44,7 +49,7 @@ public class ControlBox
         
         //Add buttons to VBox
         VBox layout = new VBox(10);
-        layout.getChildren().addAll(closeButton, release);
+        layout.getChildren().addAll(l2, l3, l4, closeButton, release);
         layout.setAlignment(Pos.CENTER);
         
         //Display window

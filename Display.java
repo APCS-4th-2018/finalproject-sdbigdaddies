@@ -123,9 +123,9 @@ public class Display
             //rotate according to the function calctheta in lab
             r = new Rotate((lab.calctheta(System.currentTimeMillis())), Rotate.Y_AXIS);
             tr = tr.createConcatenation(r);
-            tr.createConcatenation(new Rotate(10, Rotate.X_AXIS));
             group.getTransforms().clear();
             group.getTransforms().add(tr);
+            group.getTransforms().add(new Rotate(10, Rotate.X_AXIS));
         }
     }
     
@@ -134,5 +134,14 @@ public class Display
     {
         for(int i = 0; i < 10000; i++)
             i += 3/3.0;
+    }
+    
+    /**
+     * Returns the Lab
+     * @return Lab lab
+     */
+    public Lab getLab()
+    {
+        return lab;
     }
 }

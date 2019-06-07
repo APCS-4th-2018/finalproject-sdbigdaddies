@@ -95,4 +95,13 @@ public class Lab
     {
      return p;
     }
+    /**
+     * A getter for the period of the object
+     * 
+     * @return    period
+     */
+    public double getPeriod()
+    {
+     return period;
+    }
 }
