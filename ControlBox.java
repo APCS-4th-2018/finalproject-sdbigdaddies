@@ -6,7 +6,7 @@ import javafx.geometry.*;
 
 public class ControlBox
 {
-    public static void display(Stage stage, Scene main)
+    public static void display(Stage stage, Scene main, Display d)
     {
         Stage window = new Stage();
         
@@ -22,9 +22,14 @@ public class ControlBox
             stage.show();
             window.close();
         });
+        Button release = new Button("Release");
+        release.setOnAction(e ->
+        {
+            d.rotate();
+        });
         
         VBox layout = new VBox(10);
-        layout.getChildren().addAll(closeButton);
+        layout.getChildren().addAll(closeButton, release);
         layout.setAlignment(Pos.CENTER);
         
         Scene scene = new Scene(layout);

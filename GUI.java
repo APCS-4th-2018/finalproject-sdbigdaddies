@@ -222,9 +222,10 @@ public class GUI extends Application
             PhysicalBar po = new PhysicalBar(Double.parseDouble(massInput.getText()), Double.parseDouble(radiusInput.getText()),
                  Double.parseDouble(heightInput.getText()), Double.parseDouble(widthInput.getText()));
             Lab experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
-            window.setScene(new Display(experiment, window, menu).getScene());
+            Display d = new Display(experiment, window, menu);
+            window.setScene(d.getScene());
             window.show();
-            ControlBox.display(window, menu);
+            ControlBox.display(window, menu, d);
           }
         });
     }
@@ -361,9 +362,10 @@ public class GUI extends Application
                 }
                     
             
-            window.setScene(new Display(experiment, window, menu).getScene());
+            Display d = new Display(experiment, window, menu);
+            window.setScene(d.getScene());
             window.show();
-            ControlBox.display(window, menu);
+            ControlBox.display(window, menu, d);
           }
        
         });
@@ -473,9 +475,10 @@ public class GUI extends Application
                //create test objects
                PhysicalSphere po = new PhysicalSphere(Double.parseDouble(massInput.getText()), Double.parseDouble(radiusInput.getText()));
                Lab experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
-               window.setScene(new Display(experiment, window, menu).getScene());
-               window.show();
-               ControlBox.display(window, menu);
+               Display d = new Display(experiment, window, menu);
+            window.setScene(d.getScene());
+            window.show();
+            ControlBox.display(window, menu, d);
            }   
         });
     }

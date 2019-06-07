@@ -20,6 +20,7 @@ public class Display
     private Lab lab;
     private Stage window;
     private Scene menu;
+    private Group group;
     
     public Display(Lab l, Stage passedStage, Scene main)
     {
@@ -30,7 +31,7 @@ public class Display
     
     public Scene getScene()
     {
-        Group group = new Group();
+        group = new Group();
         
         createObject(group);
         
@@ -44,8 +45,6 @@ public class Display
         group.getTransforms().add(new Translate(0, 0, 10));
         box.setMaterial(new PhongMaterial(new Color(Math.random(), Math.random(), Math.random(), 1.0)));
         */
-        
-        new AutoRotate(group, lab).start();
         
         return scene;
     }
@@ -81,5 +80,11 @@ public class Display
         group.translateYProperty().set(HEIGHT / 2);
         
         group.getTransforms().add(new Rotate(10, Rotate.X_AXIS));
+    }
+    
+    public void rotate()
+    {
+        for(int t = 0; t < 100000; t++)
+            group.getTransforms().add(new Rotate(lab.calctheta(t), Rotate.Y_AXIS));
     }
 }
