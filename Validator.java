@@ -2,7 +2,7 @@
  * Write a description of class Validator here.
  * takes textfields from gui and checks to make sure they are valid inputs, otherwise it promtpts an error box
  * @author (David Glozman)
- * @version (a version number or a date)
+ * @version (1.0.0)
  */
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;

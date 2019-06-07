@@ -55,16 +55,6 @@ public class Display
         
         Scene scene = new Scene(group, WIDTH, HEIGHT, true, SceneAntialiasing.BALANCED);
         
-        //Stuff that can be used
-        /*
-        group.getTransforms().add(new Rotate(10, Rotate.X_AXIS));
-        group.getTransforms().add(new Rotate(10));
-        group.getTransforms().add(new Rotate(10, Rotate.Y_AXIS));
-        group.getTransforms().add(new Translate(0, 10));
-        group.getTransforms().add(new Translate(0, 0, 10));
-        box.setMaterial(new PhongMaterial(new Color(Math.random(), Math.random(), Math.random(), 1.0)));
-        */
-        
        //Return the new scene
         return scene;
     }

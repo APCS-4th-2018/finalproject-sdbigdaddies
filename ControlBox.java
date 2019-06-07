@@ -30,6 +30,7 @@ public class ControlBox
         window.setMinWidth(300);
         window.setMinHeight(200);
         
+        //Add labels for object data
         Label l2 = new Label("Angular Frequency: " + Format.right(d.getLab().getAngFreq(), 6, 3) + " Radians per Second");
         Label l3 = new Label("Period: " + Format.right(d.getLab().getPeriod(), 6, 3) + " Seconds");
         Label l4 = new Label("Initial Theta: " + Format.right(d.getLab().getTheta(), 6, 3) + " Radians");
