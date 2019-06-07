@@ -29,6 +29,7 @@ public class AlertBox
 
         //close button
         Button closeButton = new Button("Close this window");
+        closeButton.setId("closeButton");
         closeButton.setOnAction(e -> window.close());
         
         //add to layout
