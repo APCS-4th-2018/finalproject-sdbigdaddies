@@ -1,13 +1,13 @@
 #BlueJ class context
 comment0.target=PhysicalRod
-comment0.text=\r\n\ Abstract\ class\ PhysicalRod\ -\ Rod\ object\ to\ be\ rotated\ in\ the\ pendulum.\r\n\r\n\ @author\ Omri\ Habot\r\n\ @version\ 1.0.0\r\n
+comment0.text=\n\ Abstract\ class\ PhysicalRod\ -\ Rod\ object\ to\ be\ rotated\ in\ the\ pendulum.\n\n\ @author\ Omri\ Habot\n\ @version\ 1.0.0\n
 comment1.params=myMass\ myRadius\ myHeight
 comment1.target=PhysicalRod(double,\ double,\ double)
-comment1.text=\r\n\ Initializes\ the\ mass\ and\ radius\ of\ the\r\n\ object\ with\ the\ passed\ values.\r\n\ \r\n\ @param\ myMass\ the\ mass\ of\ the\ object\ in\ kilograms.\r\n\ @param\ myRadius\ the\ radius\ (half\ the\ length)\ of\ the\ object\ in\ meters.\r\n
+comment1.text=\n\ Initializes\ the\ mass\ and\ radius\ of\ the\n\ object\ with\ the\ passed\ values.\n\ \n\ @param\ myMass\ the\ mass\ of\ the\ object\ in\ kilograms.\n\ @param\ myRadius\ the\ radius\ (half\ the\ length)\ of\ the\ object\ in\ meters.\n
 comment2.params=
 comment2.target=double\ getInertia()
-comment2.text=\r\n\ Returns\ the\ value\ of\ the\ moment\ of\ inertia\ of\ the\ object\ in\ terms\r\n\ of\ kilograms\ and\ meters.\r\n\ \r\n\ @return\ inertia\ the\ moment\ of\ inertia\ of\ the\ object.\r\n
+comment2.text=\n\ Returns\ the\ value\ of\ the\ moment\ of\ inertia\ of\ the\ object\ in\ terms\n\ of\ kilograms\ and\ meters.\n\ \n\ @return\ inertia\ the\ moment\ of\ inertia\ of\ the\ object.\n
 comment3.params=
 comment3.target=java.lang.String\ type()
-comment3.text=\r\n\ Returns\ the\ name\ of\ the\ type\ of\ object.\r\n\ \r\n\ @return\ the\ name\ of\ the\ type\ of\ object\r\n
+comment3.text=\n\ Returns\ the\ name\ of\ the\ type\ of\ object.\n\ \n\ @return\ the\ name\ of\ the\ type\ of\ object\n
 numComments=4
