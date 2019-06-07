@@ -3,7 +3,7 @@ padding: 5px;
 }
 
 .button{
-    color: white;
+    -fx-text-fill: #ffffff;
      -fx-background-color: #44dd88;
      -fx-font-size: 14pt;
      -fx-font-family: "Helvetica";
@@ -38,5 +38,16 @@ padding: 5px;
 }
 #top{
 -fx-font-weight: bold;
--fx-font-size: 16pt;
+-fx-text-fill: #ffffff;
+-fx-font-size: 18pt;
+font-family: "Helvetica";
+}
+#closeButton{
+    -fx-text-fill: #ffffff;
+     -fx-background-color: #ff0000;
+     -fx-font-size: 14pt;
+     -fx-font-family: "Helvetica";
+}
+#closeButton:hover{
+    -fx-background-color: #ff4500;
 }
