@@ -26,7 +26,7 @@ public class Validator
         String text = null;
         
         //check if its a number and its non null 
-        if(!input.getText().matches("[0-9]+") || input.getText().equals(null))
+        if(!input.getText().matches("[0.0-9.0]+") || input.getText().equals(null))
         {
             isNum = false; //false if it matches
             
