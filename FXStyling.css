@@ -1,23 +1,42 @@
-#bar
-{
-	-fx-font-size: 30px;
-	-fx-padding: 6 6 6 6;
-	-fx-border-radius: 8;
-	-fx-font-weight: bold;
+div { 
+padding: 5px;
 }
-#rod
-{
+
+.button{
+    color: white;
+     -fx-background-color: #44dd88;
+     -fx-font-size: 14pt;
+     -fx-font-family: "Helvetica";
+}
+
+.button:hover {
+    -fx-background-color: #61eb9f;
+}
+.label{
+    -fx-font-size: 14pt;
+    -fx-color: white;
+     -fx-font-family: "Helvetica";
+}
+#mainMenu{
+-fx-background-image: url("LiaoPic2.jpg");
+-fx-background-repeat:stretch;
+-fx-background-size: 900 506;
+-fx-background-position:center center;
+-fx-effect: dropshadow(three-pass-box, black, 30,0.5,0,0);
 
 }
-#sphere
-{
-
+#nameLabel{
+    -fx-font-weight: bold;
+    -fx-font-size: 16pt;
+    -fx-text-decoration: underline;
 }
-#disk
-{
-
+#create{
+    -fx-font-size: 12pt;
 }
-.root
-{
-
+#back{
+       -fx-font-size: 12pt;
+}
+#top{
+-fx-font-weight: bold;
+-fx-font-size: 16pt;
 }
