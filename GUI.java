@@ -64,7 +64,7 @@ public class GUI extends Application
         selection.getChildren().addAll(bar, rod, disk, sphere);
         
         //creates window using layout and scene
-        menu = new Scene(selection, 700, 700);
+        menu = new Scene(selection, 400, 700);
         menu.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(menu);
         window.show();
@@ -92,6 +92,7 @@ public class GUI extends Application
         HBox row4 = new HBox(5);
         HBox row5 = new HBox(5);
         HBox row6 = new HBox(5);
+        HBox row7 = new HBox(5);
         
         //title at the top
         Label nameLabel = new Label("Bar");
@@ -178,11 +179,13 @@ public class GUI extends Application
         back.setId("back");
         back.setOnAction(e -> {window.setScene(menu); window.show();});
         
+        row7.getChildren().addAll(create, back);
+        
         //creates layout
-        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, row6, create, back);
+        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5, row6, row7);
         
         //display scene
-        Scene barScene = new Scene(layout, 350, 400);
+        Scene barScene = new Scene(layout, 450, 500);
         barScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(barScene);
         window.show();
@@ -192,7 +195,7 @@ public class GUI extends Application
            if(!valid.barCheck(thetaInput, massInput, radiusInput, tConstantInput, heightInput, widthInput))
            {
              //redisplay scene
-             Scene drScene = new Scene(layout, 350, 400);
+             Scene drScene = new Scene(layout, 450, 500);
              drScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
              window.setScene(drScene);
              window.show();
@@ -226,6 +229,7 @@ public class GUI extends Application
         HBox row4 = new HBox(5);
         HBox row5 = new HBox(5);
         HBox row6 = new HBox(5);
+        HBox row7 = new HBox(5);
         
         //title at the top
         Label nameLabel = new Label(title);
@@ -300,11 +304,13 @@ public class GUI extends Application
         back.setId("back");
         back.setOnAction(e -> {window.setScene(menu); window.show();});
         
+        row7.getChildren().addAll(create, back);
+        
         //creates layout
-        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5,row6, create, back);
+        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5,row6, row7);
       
             //display the scene
-             Scene diskrodScene = new Scene(layout, 350, 400);
+             Scene diskrodScene = new Scene(layout, 450, 500);
              diskrodScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
              window.setScene(diskrodScene);
              window.show();
@@ -313,7 +319,7 @@ public class GUI extends Application
         create.setOnAction(e -> {
            if(!valid.diskrodCheck(thetaInput, massInput, radiusInput, tConstantInput, heightInput))
            {
-             Scene drScene = new Scene(layout, 350, 400);
+             Scene drScene = new Scene(layout, 450, 500);
              drScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
              window.setScene(drScene);
              window.show();
@@ -357,6 +363,7 @@ public class GUI extends Application
         HBox row2 = new HBox(5);
         HBox row3 = new HBox(5);
         HBox row4 = new HBox(5);
+        HBox row5 = new HBox(5);
         
         //title at the top
         Label nameLabel = new Label("Sphere");
@@ -418,11 +425,13 @@ public class GUI extends Application
         back.setId("back");
         back.setOnAction(e -> {window.setScene(menu); window.show();});
         
+        row5.getChildren().addAll(create, back);
+        
         //creates layout
-        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, create, back);
+        layout.getChildren().addAll(nameLabel, row1, row2, row3, row4, row5);
         
         //display the scene
-        Scene sphereScene = new Scene(layout, 350, 400);
+        Scene sphereScene = new Scene(layout, 450, 500);
         sphereScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(sphereScene);
         window.show();
@@ -432,7 +441,7 @@ public class GUI extends Application
            if(!valid.sphereCheck(thetaInput, massInput, radiusInput, tConstantInput))
            {
                //redisplay scene
-             Scene drScene = new Scene(layout, 350, 400);
+             Scene drScene = new Scene(layout, 450, 500);
              drScene.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
              window.setScene(drScene);
              window.show();
