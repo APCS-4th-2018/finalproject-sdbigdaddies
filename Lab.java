@@ -5,7 +5,7 @@
  * @author (Nico Cereghini)
  * @version (5/28/2019)
  */
-public class Lab
+public class Lab 
 {
     // instance variables - replace the example below with your own
     private double angFreq;
@@ -85,7 +85,7 @@ public class Lab
     public double getAngFreq()
     {
         return angFreq;
-    }
+    } 
     /**
      * A getter for the object spinning
      * 
