@@ -35,9 +35,12 @@ public class GUI extends Application
         window = primaryStage;
         window.setTitle("Torsional Pendelum Lab");
         
+        //vertical box
+        VBox mainMenu = new VBox(15);
+        mainMenu.setId("mainMenu");
+        
         //creates a horizontal layout that is centered
         HBox selection = new HBox(15);
-        selection.setAlignment(Pos.CENTER);
         selection.setId("selection");
         
         //calls bar method that takes and validates bar input
@@ -63,8 +66,15 @@ public class GUI extends Application
         //adds button to layout
         selection.getChildren().addAll(bar, rod, disk, sphere);
         
+        Label top = new Label("Mr. Liaos Torsional Pendelum Quest!");
+        top.setId("top");
+        
+        //align center
+        mainMenu.getChildren().addAll(top, selection);
+        mainMenu.setAlignment(Pos.CENTER);
+        
         //creates window using layout and scene
-        menu = new Scene(selection, 400, 700);
+        menu = new Scene(selection, 650, 500);
         menu.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(menu);
         window.show();
