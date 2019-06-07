@@ -223,6 +223,8 @@ public class GUI extends Application
                  Double.parseDouble(heightInput.getText()), Double.parseDouble(widthInput.getText()));
             Lab experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
             Display d = new Display(experiment, window, menu);
+            
+            //Display object and control box
             window.setScene(d.getScene());
             window.show();
             ControlBox.display(window, menu, d);
@@ -361,8 +363,10 @@ public class GUI extends Application
                     experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
                 }
                     
-            
+            //Create display
             Display d = new Display(experiment, window, menu);
+            
+            //Display object and control box
             window.setScene(d.getScene());
             window.show();
             ControlBox.display(window, menu, d);
@@ -476,6 +480,8 @@ public class GUI extends Application
                PhysicalSphere po = new PhysicalSphere(Double.parseDouble(massInput.getText()), Double.parseDouble(radiusInput.getText()));
                Lab experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
                Display d = new Display(experiment, window, menu);
+               
+            //Display object and control box
             window.setScene(d.getScene());
             window.show();
             ControlBox.display(window, menu, d);

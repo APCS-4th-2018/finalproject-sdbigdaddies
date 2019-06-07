@@ -14,16 +14,25 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+/**
+ * Class capable of displaying rotating objects
+ */
 public class Display
 {
-    //initialize display size
+    //Initialize display size
     private static final int WIDTH = 800;
     private static final int HEIGHT = 600;
-    private Lab lab; //lab for getting values for the simulation
-    private Stage window; //display of the lab
-    private Scene menu; //menu window for the lab
-    private Group group; //the object/group being rotated
+    private Lab lab; //Lab for getting values for the simulation
+    private Stage window; //Display of the lab
+    private Scene menu; //Menu window for the lab
+    private Group group; //Object/group being rotated
     
+    /**
+     * Create new Display class
+     * @param Lab lab
+     * @param Stage stage
+     * @param Scene mainScene
+     */
     public Display(Lab l, Stage passedStage, Scene main)
     {
         lab = l;
@@ -31,14 +40,19 @@ public class Display
         menu = main;
     }
     
+    /**
+     * Returns the scene with objects
+     */
     public Scene getScene()
     {
+        //Set up group and scene
         group = new Group();
         
         createObject(group);
         
         Scene scene = new Scene(group, WIDTH, HEIGHT, true, SceneAntialiasing.BALANCED);
         
+        //Stuff that can be used
         /*
         group.getTransforms().add(new Rotate(10, Rotate.X_AXIS));
         group.getTransforms().add(new Rotate(10));
@@ -48,9 +62,11 @@ public class Display
         box.setMaterial(new PhongMaterial(new Color(Math.random(), Math.random(), Math.random(), 1.0)));
         */
         
+       //Return the new scene
         return scene;
     }
     
+    //Creates and sets up the object in the group
     private void createObject(Group group)
     {
         PhysicalObject pO = lab.getObj();
@@ -92,22 +108,28 @@ public class Display
      */
     public void rotate()
     {
+        //Set up rotation object
         Rotate r = null;
         Transform tr = new Rotate();
         
-        for(double t = 0; t < 1000; t  +=0.1)
+        //Rotate to next thetas
+        for(double t = 0; t < 1000; t += 0.1)
         {
-            /*try{
-                Thread.sleep(500);
-            }
-            catch(Exception e){}*/
-            
+            suspend();
             
             //rotate according to the function calctheta in lab
-            r = new Rotate((lab.calctheta(t)), Rotate.Y_AXIS);
+            r = new Rotate((lab.calctheta(System.currentTimeMillis())), Rotate.Y_AXIS);
             tr = tr.createConcatenation(r);
+            tr.createConcatenation(new Rotate(10, Rotate.X_AXIS));
             group.getTransforms().clear();
             group.getTransforms().add(tr);
         }
+    }
+    
+    //Pauses for a very short while
+    private void suspend()
+    {
+        for(int i = 0; i < 10000; i++)
+            i += 3/3.0;
     }
 }
