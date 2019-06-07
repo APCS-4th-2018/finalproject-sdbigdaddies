@@ -51,7 +51,7 @@ public class Lab
     {
       return 1/freq;
     }
-    private double calctheta(double time)
+    public double calctheta(double time)
     {
      return initTheta*Math.cos(angFreq*time);
     }

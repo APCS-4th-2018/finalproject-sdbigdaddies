@@ -15,9 +15,9 @@ import javafx.scene.control.*;
 public class GUI extends Application 
 {
     //instance variables
-    Stage window;
-    Scene menu;
-    VBox layout;
+    private Stage window;
+    private Scene menu;
+    private VBox layout;
     
     public static void main(String[] args)
     {
@@ -222,8 +222,9 @@ public class GUI extends Application
             PhysicalBar po = new PhysicalBar(Double.parseDouble(massInput.getText()), Double.parseDouble(radiusInput.getText()),
                  Double.parseDouble(heightInput.getText()), Double.parseDouble(widthInput.getText()));
             Lab experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
-            //Display test = new Display(experiment);
-            
+            window.setScene(new Display(experiment, window, menu).getScene());
+            window.show();
+            ControlBox.display(window, menu);
           }
         });
     }
@@ -333,6 +334,7 @@ public class GUI extends Application
              
         //either simulates using input data or reprompts user by displaying error pop up with invalid inpuit
         create.setOnAction(e -> {
+            Lab experiment = null;
            if(!valid.diskrodCheck(thetaInput, massInput, radiusInput, tConstantInput, heightInput))
            {
              Scene drScene = new Scene(layout, 450, 500);
@@ -346,19 +348,22 @@ public class GUI extends Application
             PhysicalObject po = null;
             if(s.equals("PhysicalRod")) //if its a physical rod
             {
-                po = new PhysicalRod(Double.parseDouble(massInput.getText()), Double.parseDouble(radiusInput.getText()),
-                 Double.parseDouble(heightInput.getText()));
+                po = new PhysicalRod(Double.parseDouble(massInput.getText()), Double.parseDouble(heightInput.getText()),
+                 Double.parseDouble(radiusInput.getText()));
+                experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
             }
             else
                 if(s.equals("PhysicalDisk")) //if its a physical disk
                 {
                     po = new PhysicalDisk(Double.parseDouble(massInput.getText()), Double.parseDouble(radiusInput.getText()),
                         Double.parseDouble(heightInput.getText()));
-                    Lab experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
+                    experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
                 }
                     
             
-            //Display test = new Display(experiment);
+            window.setScene(new Display(experiment, window, menu).getScene());
+            window.show();
+            ControlBox.display(window, menu);
           }
        
         });
@@ -468,7 +473,9 @@ public class GUI extends Application
                //create test objects
                PhysicalSphere po = new PhysicalSphere(Double.parseDouble(massInput.getText()), Double.parseDouble(radiusInput.getText()));
                Lab experiment = new Lab(Double.parseDouble(thetaInput.getText()), po, Double.parseDouble(tConstantInput.getText()));
-               //Display test = new Display(experiment);
+               window.setScene(new Display(experiment, window, menu).getScene());
+               window.show();
+               ControlBox.display(window, menu);
            }   
         });
     }
