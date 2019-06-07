@@ -42,6 +42,7 @@ public class GUI extends Application
         //creates a horizontal layout that is centered
         HBox selection = new HBox(15);
         selection.setId("selection");
+        selection.setAlignment(Pos.CENTER);
         
         //calls bar method that takes and validates bar input
         Button bar = new Button("Bar");
@@ -69,12 +70,17 @@ public class GUI extends Application
         Label top = new Label("Mr. Liaos Torsional Pendelum Quest!");
         top.setId("top");
         
+        HBox topRow = new HBox(15);
+        topRow.getChildren().add(top);
+        topRow.setId("topRow");
+        topRow.setAlignment(Pos.CENTER);
+        
         //align center
-        mainMenu.getChildren().addAll(top, selection);
+        mainMenu.getChildren().addAll(topRow, selection);
         mainMenu.setAlignment(Pos.CENTER);
         
         //creates window using layout and scene
-        menu = new Scene(selection, 650, 500);
+        menu = new Scene(mainMenu, 650, 500);
         menu.getStylesheets().add(getClass().getResource("FXStyling.css").toExternalForm());
         window.setScene(menu);
         window.show();

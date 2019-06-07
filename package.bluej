@@ -2,8 +2,13 @@
 dependency1.from=Validator
 dependency1.to=AlertBox
 dependency1.type=UsesDependency
+<<<<<<< HEAD
 dependency2.from=Lab
 dependency2.to=PhysicalObject
+=======
+dependency2.from=Validator
+dependency2.to=AlertBox
+>>>>>>> 63d612a3bf89e413e8bf58693d3946f0e1eebd60
 dependency2.type=UsesDependency
 dependency3.from=GUI
 dependency3.to=Validator
@@ -26,18 +31,35 @@ dependency8.type=UsesDependency
 dependency9.from=GUI
 dependency9.to=PhysicalSphere
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=700
 editor.fx.0.width=650
 editor.fx.0.x=409
 editor.fx.0.y=32
 objectbench.height=94
 objectbench.width=763
+=======
+editor.fx.0.height=722
+editor.fx.0.width=1302
+editor.fx.0.x=85
+editor.fx.0.y=55
+objectbench.height=101
+objectbench.width=776
+>>>>>>> 63d612a3bf89e413e8bf58693d3946f0e1eebd60
 package.divider.horizontal=0.6
+<<<<<<< HEAD
 package.divider.vertical=0.8002382843526608
 package.editor.height=396
 package.editor.width=643
 package.editor.x=604
 package.editor.y=30
+=======
+package.divider.vertical=0.8007380073800738
+package.editor.height=427
+package.editor.width=651
+package.editor.x=306
+package.editor.y=152
+>>>>>>> 63d612a3bf89e413e8bf58693d3946f0e1eebd60
 package.frame.height=600
 package.frame.width=800
 package.numDependencies=9
