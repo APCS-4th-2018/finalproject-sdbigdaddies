@@ -15,7 +15,7 @@ padding: 5px;
 .label{
     -fx-font-size: 14pt;
     -fx-color: white;
-     -fx-font-family: "Helvetica";
+    -fx-font-family: "Helvetica";
 }
 #mainMenu{
 -fx-background-image: url("LiaoPic2.jpg");
