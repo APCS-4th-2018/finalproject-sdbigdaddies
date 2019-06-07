@@ -39,7 +39,7 @@ padding: 5px;
 #top{
 -fx-font-weight: bold;
 -fx-text-fill: #ffffff;
--fx-font-size: 18pt;
+-fx-font-size: 18px;
 font-family: "Helvetica";
 }
 #closeButton{
