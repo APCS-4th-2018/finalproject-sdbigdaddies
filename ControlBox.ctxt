@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=ControlBox
+comment1.params=stage\ main\ d
+comment1.target=void\ display(javafx.stage.Stage,\ javafx.scene.Scene,\ Display)
+numComments=2

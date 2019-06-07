@@ -9,18 +9,20 @@ import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Translate;
 import javafx.scene.paint.PhongMaterial;
 import javafx.scene.SceneAntialiasing;
+import javafx.scene.transform.Transform;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class Display
 {
+    //initialize display size
     private static final int WIDTH = 800;
     private static final int HEIGHT = 600;
-    private Lab lab;
-    private Stage window;
-    private Scene menu;
-    private Group group;
+    private Lab lab; //lab for getting values for the simulation
+    private Stage window; //display of the lab
+    private Scene menu; //menu window for the lab
+    private Group group; //the object/group being rotated
     
     public Display(Lab l, Stage passedStage, Scene main)
     {
@@ -54,6 +56,7 @@ public class Display
         PhysicalObject pO = lab.getObj();
         Shape3D s = null;
         
+        //create the correct object requested by the user
         switch(pO.type())
         {
             case "bar":
@@ -71,20 +74,40 @@ public class Display
                 break;
         }
         
-        s.setMaterial(new PhongMaterial(Color.RED));
+        s.setMaterial(new PhongMaterial(Color.RED)); //set the color of the object
         
+        //add the object to the group
         group.getChildren().add(s);
         
         //group.translateZProperty().set(200);
+        
+        //set the object to be displayed at the center
         group.translateXProperty().set(WIDTH / 2);
         group.translateYProperty().set(HEIGHT / 2);
         
         group.getTransforms().add(new Rotate(10, Rotate.X_AXIS));
     }
-    
+    /**
+     * Rotates the group according to the function in the lab class.
+     */
     public void rotate()
     {
-        for(int t = 0; t < 100000; t++)
-            group.getTransforms().add(new Rotate(lab.calctheta(t), Rotate.Y_AXIS));
+        Rotate r = null;
+        Transform tr = new Rotate();
+        
+        for(double t = 0; t < 1000; t  +=0.1)
+        {
+            /*try{
+                Thread.sleep(500);
+            }
+            catch(Exception e){}*/
+            
+            
+            //rotate according to the function calctheta in lab
+            r = new Rotate((lab.calctheta(t)), Rotate.Y_AXIS);
+            tr = tr.createConcatenation(r);
+            group.getTransforms().clear();
+            group.getTransforms().add(tr);
+        }
     }
 }
