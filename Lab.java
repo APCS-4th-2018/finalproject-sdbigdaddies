@@ -1,4 +1,3 @@
-
 /**
  * This is the calss modeling the current lab set up the user desires before
  * the simulation begins
@@ -13,8 +12,7 @@ public class Lab
     private double freq;
     private double period;
     private double tor; //torsional constant
-    private double alpha;
-    private double theta;
+    private double initTheta;
     private PhysicalObject p;
     /**
      * Constructor for objects of class Lab assuming user wants their own 
@@ -23,13 +21,13 @@ public class Lab
     public Lab(double t, PhysicalObject po, double k)
     {
         // initialize instance variables
-        theta = t;
+        initTheta = Math.toRadians(t);
         p = po;
         tor = k;
         angFreq = calcAngFreq();
         freq = calcFreq();
         period = calcPeriod();
-        alpha = calcAlpha(1);
+        
     }
     /**
      * Constructor for objects of class Lab assuming the
@@ -38,47 +36,63 @@ public class Lab
     public Lab(double t, PhysicalObject po)
     {
         // initialize instance variables
-        theta = t;
+        initTheta = Math.toRadians(t);
         p = po;
         tor = 1; //Lol our default value
         angFreq = calcAngFreq();
         freq = calcFreq();
         period = calcPeriod();
-        alpha = calcAlpha(1);
     }
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public double calcAngFreq()
+    private double calcAngFreq()
     {
-     return tor/p.getInertia(); 
+     return Math.sqrt(tor/p.getInertia()); 
     }
-    public double calcFreq()
+    private double calcFreq()
     {
       return 1/freq;
     }
-    public double calcAlpha(double t)
+    private double calctheta(double time)
     {
-     return -(Math.pow(angFreq, 2))*theta*Math.cos(angFreq*t);
+     return initTheta*Math.cos(angFreq*time);
     }
-    public double calcPeriod()
+    private double calcPeriod()
     {
-     return Math.PI*2* Math.sqrt(p.getInertia()/angFreq);
+     return Math.PI*2* Math.sqrt(p.getInertia()/tor);
     }
+    /**
+     *Getter for the frequency of oscillation
+     *
+     * @return    the frequency of oscillation
+     */
     public double getFreq()
     {
         return freq;
     }
-    public double getAlpha()
+    /**
+     * Getter for the angle of displacement
+     *
+     * @return    the current angle the object is from equilibrium
+     */
+    public double getTheta()
     {
-        return alpha;
+        return initTheta;
     }
+    /**
+     * getter for the angular frequency
+     *
+     * @return    the angular frequency of an object
+     */
     public double getAngFreq()
     {
         return angFreq;
     }
-    
+    /**
+     * A getter for the object spinning
+     * 
+     * @return    the object's reference
+     */
+    public PhysicalObject getObj()
+    {
+     return p;
+    }
 }

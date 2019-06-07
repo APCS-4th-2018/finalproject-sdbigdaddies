@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class Validator here.
  * takes textfields from gui and checks to make sure they are valid inputs, otherwise it promtpts an error box

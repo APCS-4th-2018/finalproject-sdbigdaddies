@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class GUI here.
  * creates a basic gui that takes user input and creates a simulation object
