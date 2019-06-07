@@ -16,6 +16,9 @@ import javafx.stage.Stage;
 
 /**
  * Class capable of displaying rotating objects
+ * 
+ * @author Julian Ramos
+ * @version 1.0.0
  */
 public class Display
 {
